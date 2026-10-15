@@ -1,0 +1,942 @@
+{
+  "checked_at": "2026-10-15T03:30:00.752690+00:00",
+  "meaning": "HTTP reachability only. A 200 response is not proof of an active service; failure is not proof of closure.",
+  "results": [
+    {
+      "url": "https://1click.chaindefuser.com/v0/tokens",
+      "http_status": 200,
+      "final_url": "https://1click.chaindefuser.com/v0/tokens",
+      "result": "reachable"
+    },
+    {
+      "url": "https://api-v3.raydium.io/pools/info/mint?mint1=A7bdiYdS5GjqGFtxf17ppRHtDKPkkRqbKtR27dxvQXaS",
+      "http_status": 500,
+      "result": "http-error",
+      "note": "May be access protection; manual review required."
+    },
+    {
+      "url": "https://api-v3.raydium.io/pools/info/mint?mint1=JDt9rRGaieF6aN1cJkXFeUmsy7ZE4yY3CZb8tVMXVroS",
+      "http_status": 500,
+      "result": "http-error",
+      "note": "May be access protection; manual review required."
+    },
+    {
+      "url": "https://api.hyperliquid.xyz/info",
+      "http_status": 405,
+      "result": "http-error",
+      "note": "May be access protection; manual review required."
+    },
+    {
+      "url": "https://api.kamino.finance/kamino-market/GBJ3bzUiMfwC9ugaF3MM68EXMDyTUb5UryRRAcVjEowd/reserves/metrics",
+      "http_status": 200,
+      "final_url": "https://api.kamino.finance/kamino-market/GBJ3bzUiMfwC9ugaF3MM68EXMDyTUb5UryRRAcVjEowd/reserves/metrics",
+      "result": "reachable"
+    },
+    {
+      "url": "https://api.kamino.finance/v2/kamino-market",
+      "http_status": 200,
+      "final_url": "https://api.kamino.finance/v2/kamino-market",
+      "result": "reachable"
+    },
+    {
+      "url": "https://api.mainnet-beta.solana.com",
+      "http_status": 200,
+      "final_url": "https://api.mainnet-beta.solana.com",
+      "result": "reachable"
+    },
+    {
+      "url": "https://app.hyperliquid.xyz/explorer/token/0x33b2c5252e8ea8431808129c41668129",
+      "http_status": 200,
+      "final_url": "https://app.hyperliquid.xyz/explorer/token/0x33b2c5252e8ea8431808129c41668129",
+      "result": "reachable"
+    },
+    {
+      "url": "https://bitfrost.xyz",
+      "http_status": 404,
+      "result": "http-error",
+      "note": "May be access protection; manual review required."
+    },
+    {
+      "url": "https://blog.cakewallet.com/",
+      "http_status": 200,
+      "final_url": "https://blog.cakewallet.com/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://blog.cakewallet.com/zcash-is-now-live-in-cake-wallet/",
+      "http_status": 200,
+      "final_url": "https://blog.cakewallet.com/zcash-is-now-live-in-cake-wallet/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://brave.com/blog/shielded-zcash/",
+      "http_status": 200,
+      "final_url": "https://brave.com/blog/shielded-zcash/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://cakewallet.com/",
+      "http_status": 200,
+      "final_url": "https://cakewallet.com/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://crypto.news/thorchain-launches-zcash-pool-trading-comes-next/",
+      "http_status": 200,
+      "final_url": "https://crypto.news/thorchain-launches-zcash-pool-trading-comes-next/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://cryptobriefing.com/kamino-zec-backed-borrowing-solana-usdc/",
+      "http_status": 200,
+      "final_url": "https://cryptobriefing.com/kamino-zec-backed-borrowing-solana-usdc/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://cypherpunk.com",
+      "http_status": 200,
+      "final_url": "https://www.cypherpunk.com/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://data.sec.gov/submissions/CIK0001509745.json",
+      "http_status": 403,
+      "result": "http-error",
+      "note": "May be access protection; manual review required."
+    },
+    {
+      "url": "https://docs.cakewallet.com/cryptos/zcash/",
+      "http_status": 200,
+      "final_url": "https://docs.cakewallet.com/cryptos/zcash",
+      "result": "reachable"
+    },
+    {
+      "url": "https://docs.hyperunit.xyz/llms-full.txt",
+      "http_status": 200,
+      "final_url": "https://docs.hyperunit.xyz/llms-full.txt",
+      "result": "reachable"
+    },
+    {
+      "url": "https://docs.near-intents.org/integration/bridging/overview",
+      "http_status": 200,
+      "final_url": "https://docs.near-intents.org/integration/bridging/overview",
+      "result": "reachable"
+    },
+    {
+      "url": "https://docs.near-intents.org/learn/omni-bridge/overview",
+      "http_status": 200,
+      "final_url": "https://docs.near-intents.org/learn/omni-bridge/overview",
+      "result": "reachable"
+    },
+    {
+      "url": "https://docs.near-intents.org/resources/chain-support",
+      "http_status": 200,
+      "final_url": "https://docs.near-intents.org/resources/chain-support",
+      "result": "reachable"
+    },
+    {
+      "url": "https://docs.near.org/chain-abstraction/omnibridge/overview",
+      "http_status": 200,
+      "final_url": "https://docs.near.org/chain-abstraction/omnibridge/overview",
+      "result": "reachable"
+    },
+    {
+      "url": "https://docs.swapkit.dev/spotlights/chain-specific-guides/zcash-shielded-and-unified-addresses",
+      "http_status": 200,
+      "final_url": "https://docs.swapkit.dev/guides/chain-specific-guides/zcash-shielded-and-unified-addresses",
+      "result": "reachable"
+    },
+    {
+      "url": "https://dydx.trade",
+      "http_status": 200,
+      "final_url": "https://dydx.trade",
+      "result": "reachable"
+    },
+    {
+      "url": "https://edge.app/",
+      "http_status": 200,
+      "final_url": "https://edge.app/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://electriccoin.co/",
+      "http_status": 200,
+      "final_url": "https://electriccoin.co/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com",
+      "http_status": 200,
+      "final_url": "https://ethereum.publicnode.com/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://fapi.asterdex.com/fapi/v1/exchangeInfo",
+      "http_status": 200,
+      "final_url": "https://fapi.asterdex.com/fapi/v1/exchangeInfo",
+      "result": "reachable"
+    },
+    {
+      "url": "https://flexa.co/",
+      "http_status": 200,
+      "final_url": "https://flexa.co/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://flexa.co/newsroom/zashi",
+      "http_status": 200,
+      "final_url": "https://flexa.co/newsroom/zashi",
+      "result": "reachable"
+    },
+    {
+      "url": "https://forum.zcashcommunity.com/t/crosslink-incentivized-feature-net/55210",
+      "http_status": 200,
+      "final_url": "https://forum.zcashcommunity.com/t/crosslink-incentivized-feature-net/55210",
+      "result": "reachable"
+    },
+    {
+      "url": "https://gemini.com/zcash",
+      "http_status": 200,
+      "final_url": "https://www.gemini.com/credit-card/zcash",
+      "result": "reachable"
+    },
+    {
+      "url": "https://github.com/MyEtherWallet/ethereum-lists/blob/master/src/tokens/eth/0x4A64515E5E1d1073e83f30cB97BEd20400b66E10.json",
+      "http_status": 200,
+      "final_url": "https://github.com/MyEtherWallet/ethereum-lists/blob/master/src/tokens/eth/0x4A64515E5E1d1073e83f30cB97BEd20400b66E10.json",
+      "result": "reachable"
+    },
+    {
+      "url": "https://github.com/QED-it",
+      "http_status": 200,
+      "final_url": "https://github.com/QED-it",
+      "result": "reachable"
+    },
+    {
+      "url": "https://github.com/QED-it/zipherscan",
+      "http_status": 200,
+      "final_url": "https://github.com/QED-it/zipherscan",
+      "result": "reachable"
+    },
+    {
+      "url": "https://github.com/ShieldedLabs",
+      "http_status": 200,
+      "final_url": "https://github.com/ShieldedLabs",
+      "result": "reachable"
+    },
+    {
+      "url": "https://github.com/ShieldedLabs/crosslink_monolith/releases",
+      "http_status": 200,
+      "final_url": "https://github.com/ShieldedLabs/crosslink_monolith/releases",
+      "result": "reachable"
+    },
+    {
+      "url": "https://github.com/ShieldedLabs/zebra-crosslink",
+      "http_status": 200,
+      "final_url": "https://github.com/ShieldedLabs/zebra-crosslink",
+      "result": "reachable"
+    },
+    {
+      "url": "https://github.com/ZcashFoundation/zebra",
+      "http_status": 200,
+      "final_url": "https://github.com/ZcashFoundation/zebra",
+      "result": "reachable"
+    },
+    {
+      "url": "https://github.com/ZcashFoundation/zebra/releases",
+      "http_status": 200,
+      "final_url": "https://github.com/ZcashFoundation/zebra/releases",
+      "result": "reachable"
+    },
+    {
+      "url": "https://github.com/Ztarknet/quickstart",
+      "http_status": 200,
+      "final_url": "https://github.com/Ztarknet/quickstart",
+      "result": "reachable"
+    },
+    {
+      "url": "https://github.com/Ztarknet/ztarknet",
+      "http_status": 200,
+      "final_url": "https://github.com/Ztarknet/ztarknet",
+      "result": "reachable"
+    },
+    {
+      "url": "https://github.com/btcpay-zcash/btcpayserver-zcash-plugin",
+      "http_status": 200,
+      "final_url": "https://github.com/btcpay-zcash/btcpayserver-zcash-plugin",
+      "result": "reachable"
+    },
+    {
+      "url": "https://github.com/hhanh00/zkool2",
+      "http_status": 200,
+      "final_url": "https://github.com/hhanh00/zkool2",
+      "result": "reachable"
+    },
+    {
+      "url": "https://github.com/hhanh00/zkool2/releases",
+      "http_status": 200,
+      "final_url": "https://github.com/hhanh00/zkool2/releases",
+      "result": "reachable"
+    },
+    {
+      "url": "https://github.com/hhanh00/zwallet",
+      "http_status": 200,
+      "final_url": "https://github.com/hhanh00/zwallet",
+      "result": "reachable"
+    },
+    {
+      "url": "https://github.com/near/omni-cli-rs/blob/main/src/chains/svm/idl.rs",
+      "http_status": 200,
+      "final_url": "https://github.com/near/omni-cli-rs/blob/main/src/chains/svm/idl.rs",
+      "result": "reachable"
+    },
+    {
+      "url": "https://github.com/nighthawk-apps/nighthawk-android-wallet",
+      "http_status": 200,
+      "final_url": "https://github.com/nighthawk-apps/nighthawk-android-wallet",
+      "result": "reachable"
+    },
+    {
+      "url": "https://github.com/zakura-core/zakura",
+      "http_status": 200,
+      "final_url": "https://github.com/zakura-core/zakura",
+      "result": "reachable"
+    },
+    {
+      "url": "https://github.com/zcash/librustzcash",
+      "http_status": 200,
+      "final_url": "https://github.com/zcash/librustzcash",
+      "result": "reachable"
+    },
+    {
+      "url": "https://github.com/zcash/lightwalletd",
+      "http_status": 200,
+      "final_url": "https://github.com/zcash/lightwalletd",
+      "result": "reachable"
+    },
+    {
+      "url": "https://github.com/zcash/lightwalletd/releases",
+      "http_status": 200,
+      "final_url": "https://github.com/zcash/lightwalletd/releases",
+      "result": "reachable"
+    },
+    {
+      "url": "https://github.com/zcash/zallet/releases",
+      "http_status": 200,
+      "final_url": "https://github.com/zcash/zallet/releases",
+      "result": "reachable"
+    },
+    {
+      "url": "https://github.com/zcash/zcash",
+      "http_status": 200,
+      "final_url": "https://github.com/zcash/zcash",
+      "result": "reachable"
+    },
+    {
+      "url": "https://github.com/zcash/zcash-android-wallet-sdk",
+      "http_status": 200,
+      "final_url": "https://github.com/zcash/zcash-android-wallet-sdk",
+      "result": "reachable"
+    },
+    {
+      "url": "https://github.com/zcash/zcash-swift-wallet-sdk/releases",
+      "http_status": 200,
+      "final_url": "https://github.com/zcash/zcash-swift-wallet-sdk/releases",
+      "result": "reachable"
+    },
+    {
+      "url": "https://github.com/zcash/zips",
+      "http_status": 200,
+      "final_url": "https://github.com/zcash/zips",
+      "result": "reachable"
+    },
+    {
+      "url": "https://github.com/zingolabs/zaino",
+      "http_status": 200,
+      "final_url": "https://github.com/zingolabs/zaino",
+      "result": "reachable"
+    },
+    {
+      "url": "https://github.com/zingolabs/zaino/releases",
+      "http_status": 200,
+      "final_url": "https://github.com/zingolabs/zaino/releases",
+      "result": "reachable"
+    },
+    {
+      "url": "https://github.com/zingolabs/zingolib",
+      "http_status": 200,
+      "final_url": "https://github.com/zingolabs/zingolib",
+      "result": "reachable"
+    },
+    {
+      "url": "https://github.com/zingolabs/zingolib/releases",
+      "http_status": 200,
+      "final_url": "https://github.com/zingolabs/zingolib/releases",
+      "result": "reachable"
+    },
+    {
+      "url": "https://github.com/zodl-inc",
+      "http_status": 200,
+      "final_url": "https://github.com/zodl-inc",
+      "result": "reachable"
+    },
+    {
+      "url": "https://github.com/zodl-inc/zodl-android/blob/main/CHANGELOG.md",
+      "http_status": 200,
+      "final_url": "https://github.com/zodl-inc/zodl-android/blob/main/CHANGELOG.md",
+      "result": "reachable"
+    },
+    {
+      "url": "https://github.com/zodl-inc/zodl-android/releases",
+      "http_status": 200,
+      "final_url": "https://github.com/zodl-inc/zodl-android/releases",
+      "result": "reachable"
+    },
+    {
+      "url": "https://gitlab.com/thorchain/thornode/-/blob/develop/common/chain.go",
+      "http_status": 200,
+      "final_url": "https://gitlab.com/thorchain/thornode/-/blob/develop/common/chain.go",
+      "result": "reachable"
+    },
+    {
+      "url": "https://gitlab.com/thorchain/thornode/-/tree/develop/bifrost/pkg/chainclients/utxo",
+      "http_status": 200,
+      "final_url": "https://gitlab.com/thorchain/thornode/-/tree/develop/bifrost/pkg/chainclients/utxo",
+      "result": "reachable"
+    },
+    {
+      "url": "https://hyperliquid.xyz",
+      "http_status": 200,
+      "final_url": "https://hyperliquid.xyz",
+      "result": "reachable"
+    },
+    {
+      "url": "https://hyperunit.xyz",
+      "http_status": 200,
+      "final_url": "https://hyperunit.xyz",
+      "result": "reachable"
+    },
+    {
+      "url": "https://indexer.dydx.trade/v4/perpetualMarkets?ticker=ZEC-USD",
+      "http_status": 200,
+      "final_url": "https://indexer.dydx.trade/v4/perpetualMarkets?ticker=ZEC-USD",
+      "result": "reachable"
+    },
+    {
+      "url": "https://ironwood.zodl.com/",
+      "http_status": 200,
+      "final_url": "https://ironwood.zodl.com/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://kamino.com",
+      "http_status": 200,
+      "final_url": "https://kamino.com",
+      "result": "reachable"
+    },
+    {
+      "url": "https://keyst.one/zcash",
+      "http_status": 200,
+      "final_url": "https://keyst.one/zcash",
+      "result": "reachable"
+    },
+    {
+      "url": "https://lighter.xyz",
+      "http_status": 200,
+      "final_url": "https://lighter.xyz",
+      "result": "reachable"
+    },
+    {
+      "url": "https://lite-api.jup.ag/tokens/v2/search?query=JDt9rRGaieF6aN1cJkXFeUmsy7ZE4yY3CZb8tVMXVroS",
+      "http_status": 200,
+      "final_url": "https://lite-api.jup.ag/tokens/v2/search?query=JDt9rRGaieF6aN1cJkXFeUmsy7ZE4yY3CZb8tVMXVroS",
+      "result": "reachable"
+    },
+    {
+      "url": "https://mainnet.zcashexplorer.app/",
+      "http_status": 200,
+      "final_url": "https://mainnet.zcashexplorer.app/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/orderBooks",
+      "http_status": 200,
+      "final_url": "https://mainnet.zklighter.elliot.ai/api/v1/orderBooks",
+      "result": "reachable"
+    },
+    {
+      "url": "https://mayanode.mayachain.info/mayachain/inbound_addresses",
+      "http_status": 200,
+      "final_url": "https://mayanode.mayachain.info/mayachain/inbound_addresses",
+      "result": "reachable"
+    },
+    {
+      "url": "https://mayanode.mayachain.info/mayachain/mimir",
+      "http_status": 200,
+      "final_url": "https://mayanode.mayachain.info/mayachain/mimir",
+      "result": "reachable"
+    },
+    {
+      "url": "https://mayanode.mayachain.info/mayachain/pools",
+      "http_status": 200,
+      "final_url": "https://mayanode.mayachain.info/mayachain/pools",
+      "result": "reachable"
+    },
+    {
+      "url": "https://medium.com/renprotocol",
+      "http_status": 200,
+      "final_url": "https://medium.com/renprotocol",
+      "result": "reachable"
+    },
+    {
+      "url": "https://medium.com/renprotocol/moving-on-from-alameda-da62a823ce93",
+      "http_status": 403,
+      "result": "http-error",
+      "note": "May be access protection; manual review required."
+    },
+    {
+      "url": "https://near-intents.org",
+      "http_status": 200,
+      "final_url": "https://near-intents.org",
+      "result": "reachable"
+    },
+    {
+      "url": "https://nighthawkwallet.com/",
+      "http_status": 200,
+      "final_url": "https://nighthawkwallet.com/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://nowpayments.io/supported-coins/zcash-payments",
+      "http_status": 200,
+      "final_url": "https://nowpayments.io/supported-coins/zcash-payments",
+      "result": "reachable"
+    },
+    {
+      "url": "https://paywithz.cash",
+      "http_status": 200,
+      "final_url": "https://paywithz.cash",
+      "result": "reachable"
+    },
+    {
+      "url": "https://plisio.net/accept-zcash",
+      "http_status": 200,
+      "final_url": "https://plisio.net/accept-zcash",
+      "result": "reachable"
+    },
+    {
+      "url": "https://plugin-builder.btcpayserver.org/public/plugins/zcash-plugin",
+      "http_status": 200,
+      "final_url": "https://plugin-builder.btcpayserver.org/public/plugins/zcash-plugin",
+      "result": "reachable"
+    },
+    {
+      "url": "https://raydium.io",
+      "http_status": 200,
+      "final_url": "https://raydium.io/swap/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://shieldedlabs.net/",
+      "http_status": 200,
+      "final_url": "https://shieldedlabs.net/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://shieldedlabs.net/crosslink/",
+      "http_status": 200,
+      "final_url": "https://shieldedlabs.net/crosslink/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://shieldedlabs.net/roadmap/",
+      "http_status": 200,
+      "final_url": "https://shieldedlabs.net/roadmap/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://support.zodl.com/article/58-when-will-the-migration-to-ironwood-be-complete",
+      "http_status": 200,
+      "final_url": "https://support.zodl.com/article/58-when-will-the-migration-to-ironwood-be-complete",
+      "result": "reachable"
+    },
+    {
+      "url": "https://swapkit.dev",
+      "http_status": 200,
+      "final_url": "https://swapkit.dev",
+      "result": "reachable"
+    },
+    {
+      "url": "https://swapkit.dev/blog/swapkit-zcash-integration/",
+      "http_status": 200,
+      "final_url": "https://swapkit.dev/blog/swapkit-zcash-integration/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://tachyon.z.cash/",
+      "http_status": 200,
+      "final_url": "https://tachyon.z.cash/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://thorchain.org",
+      "http_status": 200,
+      "final_url": "https://thorchain.org",
+      "result": "reachable"
+    },
+    {
+      "url": "https://trezor.io/coins/wallet/zcash",
+      "http_status": 200,
+      "final_url": "https://trezor.io/coins/wallet/zcash",
+      "result": "reachable"
+    },
+    {
+      "url": "https://unstoppable.money/",
+      "http_status": 200,
+      "final_url": "https://unstoppable.money/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://www.asterdex.com",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/en",
+      "result": "reachable"
+    },
+    {
+      "url": "https://www.cipherpay.app",
+      "http_status": 200,
+      "final_url": "https://www.cipherpay.app/en",
+      "result": "reachable"
+    },
+    {
+      "url": "https://www.cipherpay.app/docs",
+      "http_status": 200,
+      "final_url": "https://www.cipherpay.app/en/docs",
+      "result": "reachable"
+    },
+    {
+      "url": "https://www.cobo.com/",
+      "http_status": 200,
+      "final_url": "https://www.cobo.com/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://www.cobo.com/post/ZEC_Ironwood_Network_Upgrade-2026-07-27-1536",
+      "http_status": 200,
+      "final_url": "https://www.cobo.com/post/ZEC_Ironwood_Network_Upgrade-2026-07-27-1536",
+      "result": "reachable"
+    },
+    {
+      "url": "https://www.coinbase.com/",
+      "http_status": 200,
+      "final_url": "https://www.coinbase.com/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://www.coindesk.com/wrapped-zcash-ethereum-tokensoft-anchorage",
+      "http_status": 200,
+      "final_url": "https://www.coindesk.com/wrapped-zcash-ethereum-tokensoft-anchorage",
+      "result": "reachable"
+    },
+    {
+      "url": "https://www.gemini.com/",
+      "http_status": 200,
+      "final_url": "https://www.gemini.com/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://www.gemini.com/blog/youre-one-step-closer-to-financial-freedom-with-shielded-zec-withdrawals",
+      "http_status": 200,
+      "final_url": "https://www.gemini.com/blog/youre-one-step-closer-to-financial-freedom-with-shielded-zec-withdrawals",
+      "result": "reachable"
+    },
+    {
+      "url": "https://www.grayscale.com/",
+      "http_status": 429,
+      "result": "http-error",
+      "note": "May be access protection; manual review required."
+    },
+    {
+      "url": "https://www.ledger.com/blog-native-shielded-zcash-support",
+      "http_status": 200,
+      "final_url": "https://www.ledger.com/blog-native-shielded-zcash-support",
+      "result": "reachable"
+    },
+    {
+      "url": "https://www.mayaprotocol.com",
+      "http_status": 200,
+      "final_url": "https://www.mayaprotocol.com",
+      "result": "reachable"
+    },
+    {
+      "url": "https://www.mayaprotocol.com/",
+      "http_status": 200,
+      "final_url": "https://www.mayaprotocol.com/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/0001720265/000119312526364568/zcsh__424b3_08.25.2026.htm",
+      "http_status": 403,
+      "result": "http-error",
+      "note": "May be access protection; manual review required."
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/0002158471/000110465926113940/tm2626975-1_s1.htm",
+      "http_status": 403,
+      "result": "http-error",
+      "note": "May be access protection; manual review required."
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1509745/000110465925125039/tm2534480d2_ex99-1.htm",
+      "http_status": 403,
+      "result": "http-error",
+      "note": "May be access protection; manual review required."
+    },
+    {
+      "url": "https://www.taiwannews.com.tw/en/news/6427603",
+      "http_status": 200,
+      "final_url": "https://www.taiwannews.com.tw/news/6427603",
+      "result": "reachable"
+    },
+    {
+      "url": "https://www.theblock.co/post/384737/zcash-developers-form-new-company",
+      "http_status": 200,
+      "final_url": "https://www.theblock.co/news/ecosystems/2026-01-08-zcash-developers-form-new-company-384737",
+      "result": "reachable"
+    },
+    {
+      "url": "https://www.wrapped.com",
+      "http_status": 200,
+      "final_url": "https://www.wrapped.com",
+      "result": "reachable"
+    },
+    {
+      "url": "https://www.zenrocklabs.io",
+      "http_status": 200,
+      "final_url": "https://zenrocklabs.io/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://www.zenrocklabs.io/",
+      "http_status": 200,
+      "final_url": "https://zenrocklabs.io/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://z.cash/wallets/",
+      "http_status": 200,
+      "final_url": "https://z.cash/ecosystem/?wallets=#tag-wallets",
+      "result": "reachable"
+    },
+    {
+      "url": "https://zakura.com/",
+      "http_status": 200,
+      "final_url": "https://zakura.com/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://zcash.github.io/zallet/",
+      "http_status": 200,
+      "final_url": "https://zcash.github.io/zallet/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://zcash.github.io/zcash/user/end-of-life.html",
+      "http_status": 200,
+      "final_url": "https://zcash.github.io/zcash/user/end-of-life.html",
+      "result": "reachable"
+    },
+    {
+      "url": "https://zcashcommunitygrants.org/",
+      "http_status": 200,
+      "final_url": "https://zcashcommunitygrants.org/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://zecblock.com/",
+      "http_status": 200,
+      "final_url": "https://zecblock.com/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://zechub.wiki/",
+      "http_status": 200,
+      "final_url": "https://zechub.wiki/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://zechub.wiki/payment-processors",
+      "http_status": 200,
+      "final_url": "https://zechub.wiki/payment-processors",
+      "result": "reachable"
+    },
+    {
+      "url": "https://zfnd.org/",
+      "http_status": 200,
+      "final_url": "https://zfnd.org/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://zgo.cash/",
+      "http_status": 200,
+      "final_url": "https://zgo.cash/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://zingolabs.org/zingo",
+      "http_status": 200,
+      "final_url": "https://zingolabs.org/zingo/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://zips.z.cash/",
+      "http_status": 200,
+      "final_url": "https://zips.z.cash/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://zips.z.cash/zip-0032",
+      "http_status": 200,
+      "final_url": "https://zips.z.cash/zip-0032",
+      "result": "reachable"
+    },
+    {
+      "url": "https://zips.z.cash/zip-0211",
+      "http_status": 200,
+      "final_url": "https://zips.z.cash/zip-0211",
+      "result": "reachable"
+    },
+    {
+      "url": "https://zips.z.cash/zip-0226",
+      "http_status": 200,
+      "final_url": "https://zips.z.cash/zip-0226",
+      "result": "reachable"
+    },
+    {
+      "url": "https://zips.z.cash/zip-0227",
+      "http_status": 200,
+      "final_url": "https://zips.z.cash/zip-0227",
+      "result": "reachable"
+    },
+    {
+      "url": "https://zips.z.cash/zip-0258",
+      "http_status": 200,
+      "final_url": "https://zips.z.cash/zip-0258",
+      "result": "reachable"
+    },
+    {
+      "url": "https://zips.z.cash/zip-0259",
+      "http_status": 200,
+      "final_url": "https://zips.z.cash/zip-0259",
+      "result": "reachable"
+    },
+    {
+      "url": "https://zips.z.cash/zip-0271",
+      "http_status": 200,
+      "final_url": "https://zips.z.cash/zip-0271",
+      "result": "reachable"
+    },
+    {
+      "url": "https://zips.z.cash/zip-0302",
+      "http_status": 200,
+      "final_url": "https://zips.z.cash/zip-0302",
+      "result": "reachable"
+    },
+    {
+      "url": "https://zips.z.cash/zip-0310",
+      "http_status": 200,
+      "final_url": "https://zips.z.cash/zip-0310",
+      "result": "reachable"
+    },
+    {
+      "url": "https://zips.z.cash/zip-0316",
+      "http_status": 200,
+      "final_url": "https://zips.z.cash/zip-0316",
+      "result": "reachable"
+    },
+    {
+      "url": "https://zips.z.cash/zip-0320",
+      "http_status": 200,
+      "final_url": "https://zips.z.cash/zip-0320",
+      "result": "reachable"
+    },
+    {
+      "url": "https://zips.z.cash/zip-0321",
+      "http_status": 200,
+      "final_url": "https://zips.z.cash/zip-0321",
+      "result": "reachable"
+    },
+    {
+      "url": "https://zips.z.cash/zip-0326",
+      "http_status": 200,
+      "final_url": "https://zips.z.cash/zip-0326",
+      "result": "reachable"
+    },
+    {
+      "url": "https://zips.z.cash/zip-1015",
+      "http_status": 200,
+      "final_url": "https://zips.z.cash/zip-1015",
+      "result": "reachable"
+    },
+    {
+      "url": "https://zips.z.cash/zip-1016",
+      "http_status": 200,
+      "final_url": "https://zips.z.cash/zip-1016",
+      "result": "reachable"
+    },
+    {
+      "url": "https://zodl.com",
+      "http_status": 200,
+      "final_url": "https://zodl.com",
+      "result": "reachable"
+    },
+    {
+      "url": "https://zodl.com/",
+      "http_status": 200,
+      "final_url": "https://zodl.com/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://zodl.com/about/",
+      "http_status": 200,
+      "final_url": "https://zodl.com/about/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://zodl.com/coinbase-announces-support-for-zcash/",
+      "http_status": 200,
+      "final_url": "https://zodl.com/coinbase-announces-support-for-zcash/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://zodl.com/ironwood-a-new-shielded-pool-for-zcash/",
+      "http_status": 200,
+      "final_url": "https://zodl.com/ironwood-a-new-shielded-pool-for-zcash/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://zodl.com/orchard-vulnerability-successfully-remediated/",
+      "http_status": 200,
+      "final_url": "https://zodl.com/orchard-vulnerability-successfully-remediated/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://zodl.com/zodl-raises-25m-in-seed-funding/",
+      "http_status": 200,
+      "final_url": "https://zodl.com/zodl-raises-25m-in-seed-funding/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://zondax.ch/blog/unlocking-privacy-the-new-zcash-shielded-app-for-ledger",
+      "http_status": 200,
+      "final_url": "https://zondax.ch/blog/unlocking-privacy-the-new-zcash-shielded-app-for-ledger",
+      "result": "reachable"
+    },
+    {
+      "url": "https://ztarknet.cash",
+      "http_status": null,
+      "result": "unresolved",
+      "note": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    }
+  ]
+}

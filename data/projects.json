@@ -1,0 +1,2721 @@
+{
+  "schema_version": 2,
+  "title": "Awesome ZecFi",
+  "as_of": "2026-10-15",
+  "scope": "A broad, curated and source-reviewed directory of Zcash finance; not an exhaustive census or investment recommendation.",
+  "categories": [
+    {
+      "id": "zcash-protocol",
+      "title": "Zcash protocol, shielded pools and upgrades"
+    },
+    {
+      "id": "zec-assets",
+      "title": "ZEC representations and bridges"
+    },
+    {
+      "id": "swaps",
+      "title": "Cross-chain swaps and routing"
+    },
+    {
+      "id": "trading",
+      "title": "Trading and derivatives"
+    },
+    {
+      "id": "lending-yield",
+      "title": "Lending, staking and yield"
+    },
+    {
+      "id": "payments",
+      "title": "Payments and merchant tools"
+    },
+    {
+      "id": "wallets",
+      "title": "Wallets and access"
+    },
+    {
+      "id": "builders",
+      "title": "Nodes, SDKs and developer tools"
+    },
+    {
+      "id": "research",
+      "title": "Organizations, research and data"
+    },
+    {
+      "id": "centralized",
+      "title": "Centralized and institutional access"
+    },
+    {
+      "id": "historical",
+      "title": "Discontinued, deprecated and changed projects"
+    }
+  ],
+  "entries": [
+    {
+      "id": "sprout-shielded-pool",
+      "name": "Sprout shielded pool",
+      "category": "historical",
+      "website": "https://zips.z.cash/zip-0211",
+      "networks": [
+        "Zcash"
+      ],
+      "kind": "protocol",
+      "description": "The original 2016 Zcash shielded pool, closed to new value by ZIP 211.",
+      "zcash_mechanism": "Sprout notes can only be moved out of the pool; no new ZEC can be shielded into Sprout.",
+      "review_focus": "Do any wallets still support migrating residual Sprout funds? Which tooling replaced zcashd's Sprout migration after zcashd's end of life?",
+      "sources": [
+        {
+          "url": "https://zips.z.cash/zip-0211",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "ZIP 211: Disabling Addition of New Value to the Sprout Chain Value Pool (Final)"
+        },
+        {
+          "url": "https://zips.z.cash/",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "ZIP index (settled upgrades, ZIP statuses)"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "direct-source",
+      "lifecycle": "deprecated",
+      "review_note": "Closed to new deposits since Canopy; residual funds can only be withdrawn. zcashd, the main Sprout-capable wallet, reached end of life on 18 Jul 2026."
+    },
+    {
+      "id": "sapling-shielded-pool",
+      "name": "Sapling shielded pool",
+      "category": "zcash-protocol",
+      "website": "https://zips.z.cash/",
+      "networks": [
+        "Zcash"
+      ],
+      "kind": "protocol",
+      "description": "The Groth16-based shielded pool introduced in 2018 and still usable alongside the newer pools.",
+      "zcash_mechanism": "Shielded notes with encrypted amounts, addresses and memos; addresses are 'zs' Sapling addresses or Sapling receivers in a unified address.",
+      "review_focus": "Which wallets still default to Sapling? Is any deprecation of Sapling proposed in current ZIPs? How much ZEC remains in Sapling?",
+      "sources": [
+        {
+          "url": "https://zips.z.cash/",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "ZIP index (settled upgrades, ZIP statuses)"
+        },
+        {
+          "url": "https://docs.cakewallet.com/cryptos/zcash/",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "Cake Wallet Zcash docs (lists 'Legacy Shielded (Sapling)')"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "direct-source",
+      "lifecycle": "not-applicable",
+      "review_note": "Not affected by the 2026 Orchard bug or the NU6.3 Orchard closure as far as the ZIPs reviewed show; wallets increasingly label it 'legacy shielded'."
+    },
+    {
+      "id": "orchard-shielded-pool",
+      "name": "Orchard shielded pool (incl. NU6.2 mitigation)",
+      "category": "zcash-protocol",
+      "website": "https://zips.z.cash/zip-0258",
+      "networks": [
+        "Zcash"
+      ],
+      "kind": "protocol",
+      "description": "The Halo 2-based shielded pool (NU5, 2022) that was restricted to withdrawals-only by NU6.3 after a 2026 circuit soundness bug.",
+      "zcash_mechanism": "After NU6.3, Orchard notes can only be spent out (including into Ironwood via the turnstile); no new value may enter Orchard and cross-address transfers inside Orchard are disabled.",
+      "review_focus": "Has all Orchard value been migrated or is any stuck? What did the turnstile accounting show about possible counterfeiting? Do wallets still scan Orchard for older accounts?",
+      "sources": [
+        {
+          "url": "https://zips.z.cash/zip-0258",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "ZIP 258: Deployment of NU6.3 (Draft, created 2026-06-19)"
+        },
+        {
+          "url": "https://zips.z.cash/",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "ZIP index: ZIP 257 Orchard Temporary Vulnerability Mitigation and NU6.2 (Final)"
+        },
+        {
+          "url": "https://zcash.github.io/zcash/user/end-of-life.html",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "zcashd End of Life page (Orchard vulnerability disclosed 1 Jun 2026)"
+        },
+        {
+          "url": "https://zodl.com/orchard-vulnerability-successfully-remediated/",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "ZODL: Orchard vulnerability successfully remediated (2026-06-02)"
+        },
+        {
+          "url": "https://zodl.com/ironwood-a-new-shielded-pool-for-zcash/",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "ZODL: Ironwood, a new shielded pool for Zcash (2026-06-06)"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "direct-source",
+      "lifecycle": "deprecated",
+      "review_note": "An Orchard circuit vulnerability was disclosed on 1 Jun 2026, mitigated in NU6.2 (ZIP 257), and since NU6.3 (mainnet block 3,428,143) Orchard is spend-only. ZODL reports no evidence of exploitation, while press reports note that shielding means cryptography alone cannot rule it out."
+    },
+    {
+      "id": "ironwood-nu6-3",
+      "name": "Ironwood shielded pool (NU6.3)",
+      "category": "zcash-protocol",
+      "website": "https://zodl.com/ironwood-a-new-shielded-pool-for-zcash/",
+      "networks": [
+        "Zcash"
+      ],
+      "kind": "protocol",
+      "description": "A new shielded pool, introduced by the NU6.3 network upgrade, that reuses the corrected Orchard protocol with formal verification and receives funds migrated from Orchard.",
+      "zcash_mechanism": "Orchard-protocol receivers (including existing unified addresses) receive into Ironwood; value leaving Orchard passes a turnstile so total migrated supply is auditable; Ironwood outputs use the ZIP 2005 quantum-recoverable note format.",
+      "review_focus": "Does your wallet actually create Ironwood outputs (ZIP 326 says wallets MUST NOT send to Orchard-pool receivers after NU6.3)? How is use_qsk key derivation handled on seed restore? What share of Orchard has migrated?",
+      "sources": [
+        {
+          "url": "https://zips.z.cash/zip-0258",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "ZIP 258: NU6.3 deployment, mainnet height 3,428,143"
+        },
+        {
+          "url": "https://zips.z.cash/zip-0326",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "ZIP 326: NU6.3 Consequences for Wallets (Draft)"
+        },
+        {
+          "url": "https://zodl.com/ironwood-a-new-shielded-pool-for-zcash/",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "ZODL: Ironwood, a new shielded pool for Zcash (June 2026)"
+        },
+        {
+          "url": "https://zips.z.cash/",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "ZIP index (settled upgrades, ZIP statuses)"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "direct-source",
+      "lifecycle": "mainnet-announced",
+      "review_note": "The ZIP index lists NU6.3 as a settled upgrade at mainnet block 3,428,143 (late July 2026), although ZIP 258 itself is still marked Draft. zcashd does not implement NU6.3, so Zebra-family nodes are the only validators that follow it."
+    },
+    {
+      "id": "nu7-network-upgrade",
+      "name": "NU7 network upgrade",
+      "category": "zcash-protocol",
+      "website": "https://zips.z.cash/zip-0259",
+      "networks": [
+        "Zcash"
+      ],
+      "kind": "protocol",
+      "description": "A pending Zcash network upgrade that shortens block time to 25 seconds, disallows v4 transactions, and adds Network Sustainability Mechanism fee burning and issuance changes.",
+      "zcash_mechanism": "Changes the consensus rules for all ZEC (ZIP 218 25-second blocks, ZIP 2003 no v4 txs, ZIP 235 burns 60% of fees, ZIP 237 halving-preserving NSM, funding-stream height updates). It adds no new transaction format and no ZSA.",
+      "review_focus": "Was the mainnet activation height set on 20 Oct 2026 as planned? How do 25-second blocks affect confirmation counts at exchanges and bridges? Are wallet fee and expiry assumptions updated?",
+      "sources": [
+        {
+          "url": "https://zips.z.cash/zip-0259",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "ZIP 259: Deployment of NU7 (Draft, created 2026-09-15; mainnet height 'TBD, to be set on Oct 20')"
+        },
+        {
+          "url": "https://github.com/ZcashFoundation/zebra/releases",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "Zebra v7.0.0-rc.0 (2026-10-02)"
+        },
+        {
+          "url": "https://zips.z.cash/",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "ZIP index (settled upgrades, ZIP statuses)"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "direct-source",
+      "lifecycle": "testnet",
+      "review_note": "Live on testnet at height 4,465,026, but ZIP 259 had no mainnet height as of 15 Oct 2026 (to be set 20 Oct), so the press-reported 5 Nov date is provisional. ZIPs 233/234 (other NSM variants) are excluded."
+    },
+    {
+      "id": "zcash-shielded-assets",
+      "name": "Zcash Shielded Assets (ZSA / OrchardZSA)",
+      "category": "zcash-protocol",
+      "website": "https://github.com/QED-it",
+      "networks": [
+        "Zcash"
+      ],
+      "kind": "protocol",
+      "description": "A proposed extension of the Orchard protocol, led by QEDIT, that would let assets other than ZEC be issued, transferred and burned inside a shielded pool.",
+      "zcash_mechanism": "Specified in ZIP 226 (transfer and burn) and ZIP 227 (issuance) using v6 transactions; QEDIT runs a separate ZSA test network with its own Zebra fork and explorer.",
+      "review_focus": "How does ZSA relate to Ironwood now that Orchard is closed? Which upgrade (if any) is targeted? Have the audits been redone after the 2026 Orchard circuit bug?",
+      "sources": [
+        {
+          "url": "https://zips.z.cash/",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "ZIP index: ZIP 226/227 Draft, ZIP 220 Withdrawn"
+        },
+        {
+          "url": "https://zips.z.cash/zip-0259",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "ZIP 259: NU7 does not include ZSA"
+        },
+        {
+          "url": "https://github.com/QED-it/zipherscan",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "QEDIT Zipherscan README (ZSA testnet explorer at test-zsa.org)"
+        },
+        {
+          "url": "https://zips.z.cash/zip-0226",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "ZIP 226: Transfer and Burn of ZSAs, Status Draft"
+        },
+        {
+          "url": "https://zips.z.cash/zip-0227",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "ZIP 227: Issuance of ZSAs, Status Draft"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "direct-source",
+      "lifecycle": "testnet",
+      "review_note": "ZSA is not in NU7 per ZIP 259; earlier 2026 reporting that NU7 would carry ZSA is outdated. Exists only on QEDIT's ZSA testnet, and no mainnet activation is scheduled."
+    },
+    {
+      "id": "crosslink",
+      "name": "Crosslink (hybrid PoW/PoS finality)",
+      "category": "zcash-protocol",
+      "website": "https://shieldedlabs.net/crosslink/",
+      "networks": [
+        "Zcash"
+      ],
+      "kind": "protocol",
+      "description": "A Shielded Labs proposal to add a proof-of-stake BFT finality layer on top of Zcash's proof-of-work chain, now running as a prototype 'Feature Net'.",
+      "zcash_mechanism": "Miners keep producing PoW blocks while ZEC-staking finalizers vote to finalize them; the feature net includes staking actions, finalizer commissions and slashing tests using test ZEC.",
+      "review_focus": "Is the feature net incentivized and with what rewards? Which parts would be upstreamed to Zebra? What are staking custody and slashing risks for delegators? Is there any activation proposal or ZIP?",
+      "sources": [
+        {
+          "url": "https://github.com/ShieldedLabs/crosslink_monolith/releases",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "crosslink_monolith releases v14 (2026-10-01), v15 (2026-10-13, feature-net upgrade at PoW height 55,296)"
+        },
+        {
+          "url": "https://shieldedlabs.net/roadmap/",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "Shielded Labs roadmap: Productionization phase Q2 2026–Q2 2027"
+        },
+        {
+          "url": "https://shieldedlabs.net/crosslink/",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "Shielded Labs Crosslink page ('proposed upgrade')"
+        },
+        {
+          "url": "https://forum.zcashcommunity.com/t/crosslink-incentivized-feature-net/55210",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "Crosslink Incentivized Feature Net Season 1, from 15 Apr 2026"
+        },
+        {
+          "url": "https://github.com/ShieldedLabs/zebra-crosslink",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "zebra-crosslink repository"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "direct-source",
+      "lifecycle": "testnet",
+      "review_note": "Runs only on a prototype feature net with code the README calls non-production, and has no mainnet ZIP or activation height. Whether the feature net is incentivized is reported only by secondary sources."
+    },
+    {
+      "id": "project-tachyon",
+      "name": "Project Tachyon",
+      "category": "zcash-protocol",
+      "website": "https://tachyon.z.cash/",
+      "networks": [
+        "Zcash"
+      ],
+      "kind": "research",
+      "description": "A proposed Zcash scaling upgrade aimed at much smaller shielded transactions, oblivious wallet sync and bounded validator state, with post-quantum privacy as a side effect.",
+      "zcash_mechanism": "Would change how shielded transactions are proven and how wallets sync; early code (e.g. recursive-proof work) is being merged into Zakura Common libraries.",
+      "review_focus": "Which ZIPs specify it? What is the trust model for oblivious sync services? Which throughput targets are measured rather than projected?",
+      "sources": [
+        {
+          "url": "https://tachyon.z.cash/",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "Project Tachyon site (proposal; requires community approval)"
+        },
+        {
+          "url": "https://zodl.com/ironwood-a-new-shielded-pool-for-zcash/",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "ZODL Ironwood post listing Tachyon among the proposing organizations"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "direct-source",
+      "lifecycle": "research",
+      "review_note": "Still a proposal, with no activation scheduled. Throughput figures quoted in the press (10k–50k TPS) are targets, not measurements."
+    },
+    {
+      "id": "dev-fund-coinholder-fund",
+      "name": "Dev fund, lockbox and Coinholder-Controlled Fund (NU6.1)",
+      "category": "zcash-protocol",
+      "website": "https://zips.z.cash/zip-1016",
+      "networks": [
+        "Zcash"
+      ],
+      "kind": "protocol",
+      "description": "The post-2025 Zcash development funding model, which sends 8% of block rewards to Zcash Community Grants and 12% to a coinholder-voted fund seeded by the deferred lockbox.",
+      "zcash_mechanism": "Protocol funding streams send 8% of block subsidy to ZCG and continue a 12% lockbox stream (FS_CCF_H3) governed by ZIP 1016 coinholder votes (quarterly, 420,000 ZEC quorum); at NU6.1 the one-time 78,750 ZEC lockbox balance was paid to a 2-of-3 multisig of ZF, ECC and Shielded Labs.",
+      "review_focus": "Who holds the multisig keys now that ECC's team has left? Are key-holder funds shielded as ZIP 271 requires? What have coinholder votes funded, and how does NU7's 25s block time shift the funding-stream end heights?",
+      "sources": [
+        {
+          "url": "https://zips.z.cash/zip-1016",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "ZIP 1016: Community and Coinholder Funding Model (Proposed)"
+        },
+        {
+          "url": "https://zips.z.cash/zip-0271",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "ZIP 271: Dev Fund Extension and One-Time Disbursement (78,750 ZEC lockbox at NU6.1)"
+        },
+        {
+          "url": "https://zips.z.cash/",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "ZIP index: ZIP 255 NU6.1 deployment Final"
+        },
+        {
+          "url": "https://zips.z.cash/zip-1015",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "ZIP 1015 (Status: Final)"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "direct-source",
+      "lifecycle": "mainnet-announced",
+      "review_note": "NU6.1 activated at mainnet height 3,146,400 (ZIP 255 Final), but ZIPs 1016/271 still show 'Proposed' status. Electric Coin Company is still named as a key-holder organization after its team left for ZODL, which is an open governance question."
+    },
+    {
+      "id": "unified-addresses",
+      "name": "Unified Addresses (ZIP 316)",
+      "category": "zcash-protocol",
+      "website": "https://zips.z.cash/zip-0316",
+      "networks": [
+        "Zcash"
+      ],
+      "kind": "standard",
+      "description": "The Zcash address and viewing-key encoding that bundles receivers for several pools (transparent, Sapling, Orchard-protocol) into one string.",
+      "zcash_mechanism": "The sender's wallet picks the most private receiver it supports. After NU6.3, Orchard-protocol receivers in existing UAs receive into Ironwood.",
+      "review_focus": "Does the wallet verify all receivers in a UA (e.g. Keystone cannot fully verify Sapling receivers)? Does a UA that includes a transparent receiver leak linkability? How are TEX addresses handled?",
+      "sources": [
+        {
+          "url": "https://zips.z.cash/zip-0316",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "ZIP 316: Unified Addresses (Rev 0 Active, Rev 2 Draft)"
+        },
+        {
+          "url": "https://zips.z.cash/zip-0326",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "ZIP 326: Orchard receivers receive Ironwood funds"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "direct-source",
+      "lifecycle": "not-applicable",
+      "review_note": "A UA that contains a transparent receiver can still be paid transparently by wallets without shielded support."
+    },
+    {
+      "id": "shielded-memos",
+      "name": "Shielded memos (ZIP 302)",
+      "category": "zcash-protocol",
+      "website": "https://zips.z.cash/zip-0302",
+      "networks": [
+        "Zcash"
+      ],
+      "kind": "standard",
+      "description": "The encrypted 512-byte memo field carried by shielded Zcash outputs, used for payment references and private messages.",
+      "zcash_mechanism": "Memos are encrypted to the recipient of a shielded output and are readable only with the matching viewing key; transparent outputs carry no memo.",
+      "review_focus": "Which structured memo formats do wallets support? Are memos visible to anyone who has been given a viewing key? How do exchanges handle memo-based deposit IDs?",
+      "sources": [
+        {
+          "url": "https://zips.z.cash/zip-0302",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "ZIP 302: Standardized Memo Field Format (Draft)"
+        },
+        {
+          "url": "https://zodl.com/",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "Zodl site: encrypted shielded notes/messages"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "direct-source",
+      "lifecycle": "not-applicable",
+      "review_note": "Memo privacy depends on the output being shielded and on who holds viewing keys."
+    },
+    {
+      "id": "viewing-keys",
+      "name": "Viewing keys and HD derivation (ZIP 32 / ZIP 310)",
+      "category": "zcash-protocol",
+      "website": "https://zips.z.cash/zip-0032",
+      "networks": [
+        "Zcash"
+      ],
+      "kind": "standard",
+      "description": "Zcash key hierarchy that lets a holder share incoming or full viewing keys to disclose shielded activity without giving spend authority.",
+      "zcash_mechanism": "Full/incoming viewing keys decrypt shielded notes for audit or compliance; ZIP 32 defines HD derivation for shielded keys. Ironwood adds a use_qsk derivation flag (ZIP 2005 / ZIP 326).",
+      "review_focus": "What exactly does a shared viewing key reveal (history, memos, future receipts)? Can it be revoked (no, only by moving funds)? Does the wallet handle use_qsk correctly on restore?",
+      "sources": [
+        {
+          "url": "https://zips.z.cash/zip-0032",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "ZIP 32: Shielded Hierarchical Deterministic Wallets (Final)"
+        },
+        {
+          "url": "https://zips.z.cash/zip-0310",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "ZIP 310: Security Properties of Sapling Viewing Keys (Draft)"
+        },
+        {
+          "url": "https://zips.z.cash/zip-0326",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "ZIP 326 use_qsk scanning rules"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "direct-source",
+      "lifecycle": "not-applicable",
+      "review_note": "Viewing-key disclosure is selective but irreversible for past activity."
+    },
+    {
+      "id": "zcash-improvement-proposals",
+      "name": "Zcash Improvement Proposals (ZIPs)",
+      "category": "zcash-protocol",
+      "website": "https://zips.z.cash/",
+      "networks": [
+        "Zcash"
+      ],
+      "kind": "standard",
+      "description": "The specification process and repository for Zcash consensus, wallet and governance changes.",
+      "zcash_mechanism": "Defines every pool, address format, upgrade and funding rule that ZEC holders and integrators depend on.",
+      "review_focus": "Check the status mismatch for deployed upgrades (e.g. NU6.3 settled while ZIP 258 is still Draft) and which editors approve changes.",
+      "sources": [
+        {
+          "url": "https://zips.z.cash/",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "ZIP index (settled upgrades, ZIP statuses)"
+        },
+        {
+          "url": "https://github.com/zcash/zips",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "zcash/zips GitHub repository"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "direct-source",
+      "lifecycle": "not-applicable",
+      "review_note": "ZIP status labels lag deployment in several cases (ZIP 258, 271, 1016)."
+    },
+    {
+      "id": "zodl-wallet",
+      "name": "Zodl (formerly Zashi)",
+      "category": "wallets",
+      "website": "https://zodl.com/",
+      "networks": [
+        "Zcash"
+      ],
+      "kind": "wallet",
+      "description": "A mobile Zcash wallet, formerly ECC's Zashi, now developed by ZODL and focused on shielded ZEC, with built-in swaps and Keystone signing.",
+      "zcash_mechanism": "Shielded-focused wallet that receives transparent ZEC and prompts one-tap shielding; supports Ironwood migration; swaps and CrossPay to and from shielded ZEC via NEAR Intents; Flexa merchant payments.",
+      "review_focus": "How are swaps routed, and what does NEAR Intents or the solver see? Is the Ironwood migration complete for your account? What metadata reaches lightwalletd servers? What is the custody model (self-custody seed)?",
+      "sources": [
+        {
+          "url": "https://zodl.com/",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "Zodl site ('Zashi is now Zodl')"
+        },
+        {
+          "url": "https://support.zodl.com/article/58-when-will-the-migration-to-ironwood-be-complete",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "Zodl support: Ironwood migration (updated 2026-08-07)"
+        },
+        {
+          "url": "https://github.com/zodl-inc/zodl-android/releases",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "zodl-android 3.17.0 (2026-10-13)"
+        },
+        {
+          "url": "https://zodl.com/zodl-raises-25m-in-seed-funding/",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "ZODL raises $25M in seed funding (2026-03-09)"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "direct-source",
+      "lifecycle": "changed",
+      "review_note": "Renamed from Zashi to Zodl in early 2026 after ECC's team left to form ZODL, with no seed migration needed per ZODL. Swaps rely on third-party NEAR Intents infrastructure, which is a separate trust surface from shielded ZEC."
+    },
+    {
+      "id": "zingo-wallet",
+      "name": "Zingo",
+      "category": "wallets",
+      "website": "https://zingolabs.org/zingo",
+      "networks": [
+        "Zcash"
+      ],
+      "kind": "wallet",
+      "description": "An iOS and Android shielded Zcash wallet from Zingo Labs, built on zingolib with its pepper-sync engine.",
+      "zcash_mechanism": "Self-custodial shielded wallet supporting unified, TEX and Orchard-protocol addresses with encrypted memos.",
+      "review_focus": "Has Zingo shipped Ironwood (NU6.3) sending and receiving? Which lightwalletd or Zaino servers does it use by default?",
+      "sources": [
+        {
+          "url": "https://zingolabs.org/zingo",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "Zingo wallet page"
+        },
+        {
+          "url": "https://github.com/zingolabs/zingolib/releases",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "zingolib v6.0.0 (2026-09-08)"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "direct-source",
+      "lifecycle": "unverified",
+      "review_note": "Its own page does not mention Ironwood, so NU6.3 support is unconfirmed."
+    },
+    {
+      "id": "zkool",
+      "name": "Zkool",
+      "category": "wallets",
+      "website": "https://github.com/hhanh00/zkool2",
+      "networks": [
+        "Zcash"
+      ],
+      "kind": "wallet",
+      "description": "A multi-account Zcash wallet by the Ywallet developer (hhanh00), positioned as Ywallet's successor, with FROST shielded multisig.",
+      "zcash_mechanism": "Supports transparent, Sapling and Orchard pools, FROST multisig with distributed key generation, and Tor/Nym transport; can import Ywallet accounts.",
+      "review_focus": "Does the current release send to Ironwood? Is the FROST multisig implementation audited? Which platforms are production builds?",
+      "sources": [
+        {
+          "url": "https://github.com/hhanh00/zkool2",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "zkool2 README"
+        },
+        {
+          "url": "https://github.com/hhanh00/zkool2/releases",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "zkool-v6.34.0 (2026-10-11)"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "code-only",
+      "lifecycle": "unverified",
+      "review_note": "The README lists only transparent, Sapling and Orchard, and Ironwood support is unconfirmed from that source. The UI is described as basic, and some features are missing."
+    },
+    {
+      "id": "edge-wallet",
+      "name": "Edge",
+      "category": "wallets",
+      "website": "https://edge.app/",
+      "networks": [
+        "Zcash"
+      ],
+      "kind": "wallet",
+      "description": "A multi-asset self-custody mobile wallet that lists Zcash among its supported assets.",
+      "zcash_mechanism": "Holds ZEC; the z.cash wallet directory labels Edge 'Shielded by default', and Edge offers in-app swaps via partners (ChangeNow, SideShift, Exolix).",
+      "review_focus": "Which pools does Edge send to after NU6.3? Do swap partners receive transparent ZEC? How does username/password cloud backup affect key security?",
+      "sources": [
+        {
+          "url": "https://edge.app/",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "Edge site"
+        },
+        {
+          "url": "https://z.cash/wallets/",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "z.cash wallet directory ('Shielded by default' badge)"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "ecosystem-only",
+      "lifecycle": "unverified",
+      "review_note": "Edge's own site does not state shielded support; the 'shielded by default' claim comes from the z.cash directory. Swaps go through third-party exchange partners."
+    },
+    {
+      "id": "unstoppable-wallet",
+      "name": "Unstoppable Wallet",
+      "category": "wallets",
+      "website": "https://unstoppable.money/",
+      "networks": [
+        "Zcash"
+      ],
+      "kind": "wallet",
+      "description": "A multi-coin, non-custodial mobile wallet that supports Zcash alongside Bitcoin and Ethereum.",
+      "zcash_mechanism": "Supports shielded ZEC per a partner endorsement on its site.",
+      "review_focus": "Does it support Ironwood and unified addresses today? Which lightwalletd server does it use? Is transparent ZEC auto-shielded?",
+      "sources": [
+        {
+          "url": "https://unstoppable.money/",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "Unstoppable site (partner quote about shielded Zcash)"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "direct-source",
+      "lifecycle": "unverified",
+      "review_note": "The 'fully shielded Zcash' wording is an older ECC partner quote, not a current technical spec. Ironwood support is unconfirmed."
+    },
+    {
+      "id": "cake-wallet",
+      "name": "Cake Wallet",
+      "category": "wallets",
+      "website": "https://docs.cakewallet.com/cryptos/zcash/",
+      "networks": [
+        "Zcash"
+      ],
+      "kind": "wallet",
+      "description": "A multi-coin, privacy-oriented self-custody wallet with Zcash support that defaults to Ironwood shielded addresses.",
+      "zcash_mechanism": "Address options: Shielded (Ironwood, default), Unified, Legacy Shielded (Sapling), rotating transparent, and static transparent. Transparent receipts above 0.005 ZEC are auto-shielded.",
+      "review_focus": "Are small transparent balances (≤0.005 ZEC) left unshielded? How do built-in exchange features handle ZEC?",
+      "sources": [
+        {
+          "url": "https://docs.cakewallet.com/cryptos/zcash/",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "Cake Wallet Zcash docs"
+        },
+        {
+          "url": "https://cakewallet.com/",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "Cake Wallet site (ZEC listed)"
+        },
+        {
+          "url": "https://blog.cakewallet.com/zcash-is-now-live-in-cake-wallet/",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "Cake Wallet blog: Zcash is Now Live in Cake Wallet, 20 Jan 2026"
+        },
+        {
+          "url": "https://blog.cakewallet.com/",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "Cake Wallet blog index (Zcash posts Jan to Feb 2026)"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "direct-source",
+      "lifecycle": "unverified",
+      "review_note": "One of the few wallets whose own docs confirm Ironwood as the default. Transparent options are still offered."
+    },
+    {
+      "id": "brave-wallet",
+      "name": "Brave Wallet",
+      "category": "wallets",
+      "website": "https://brave.com/blog/shielded-zcash/",
+      "networks": [
+        "Zcash"
+      ],
+      "kind": "wallet",
+      "description": "The browser-integrated wallet in Brave, which added shielded Zcash transactions on desktop in v1.77 (April 2025).",
+      "zcash_mechanism": "Built-in ZEC send and receive with shielded transactions on desktop; mobile shielded support was announced as coming.",
+      "review_focus": "Has Brave added Ironwood after NU6.3? Is shielded support on Android and iOS shipped? Where are proofs computed, and which servers are queried?",
+      "sources": [
+        {
+          "url": "https://brave.com/blog/shielded-zcash/",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "Brave: shielded Zcash on desktop (2025-04-02)"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "direct-source",
+      "lifecycle": "unverified",
+      "review_note": "The only primary source predates Ironwood, so current NU6.3 support and mobile shielded support are unconfirmed."
+    },
+    {
+      "id": "keystone-hardware-wallet",
+      "name": "Keystone",
+      "category": "wallets",
+      "website": "https://keyst.one/zcash",
+      "networks": [
+        "Zcash"
+      ],
+      "kind": "wallet",
+      "description": "An air-gapped QR-signing hardware wallet that supports shielded ZEC through companion wallets.",
+      "zcash_mechanism": "Signs shielded ZEC with Zodl (firmware ≥2.0.2 Cypherpunk), Vizor and Noir (≥2.5.0); Keystone Nexus is transparent-only; there is an Ironwood migration workflow.",
+      "review_focus": "Which companion wallet and firmware combination supports Ironwood today? Keystone cannot yet fully verify Sapling receivers in a UA, so what does that mean for address verification?",
+      "sources": [
+        {
+          "url": "https://keyst.one/zcash",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "Keystone Zcash page"
+        },
+        {
+          "url": "https://support.zodl.com/article/58-when-will-the-migration-to-ironwood-be-complete",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "Zodl support: Ironwood migration"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "direct-source",
+      "lifecycle": "unverified",
+      "review_note": "Shielded support depends on the companion wallet; Keystone Nexus is transparent-only."
+    },
+    {
+      "id": "ledger-zcash",
+      "name": "Ledger (Zcash support)",
+      "category": "wallets",
+      "website": "https://www.ledger.com/blog-native-shielded-zcash-support",
+      "networks": [
+        "Zcash"
+      ],
+      "kind": "wallet",
+      "description": "Hardware signer that added native shielded ZEC (Ironwood) management in Ledger Wallet Desktop in September 2026, alongside transparent ZEC.",
+      "zcash_mechanism": "Keys stay on the Ledger device while the desktop app builds shielded Ironwood transactions. A separate, earlier Zondax 'Zcash Shielded' app (Nov 2024) targeted Nano S Plus/Stax/Flex with ZecWallet and did not support Orchard.",
+      "review_focus": "Which device models support Ironwood in Ledger Wallet Desktop? When will mobile ship? How does the 2024 Zondax app relate to the new native support?",
+      "sources": [
+        {
+          "url": "https://www.ledger.com/blog-native-shielded-zcash-support",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "Ledger: native shielded Zcash support (2026-09-23)"
+        },
+        {
+          "url": "https://zondax.ch/blog/unlocking-privacy-the-new-zcash-shielded-app-for-ledger",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "Zondax: Zcash Shielded app for Ledger (2024-11-13)"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "direct-source",
+      "lifecycle": "unverified",
+      "review_note": "Shielded support is desktop-only (mobile 'coming soon') and Ledger lists no device models. Jurisdiction-dependent availability."
+    },
+    {
+      "id": "trezor-zcash",
+      "name": "Trezor (Zcash support)",
+      "category": "wallets",
+      "website": "https://trezor.io/coins/wallet/zcash",
+      "networks": [
+        "Zcash"
+      ],
+      "kind": "wallet",
+      "description": "Hardware wallet family that supports transparent ZEC through Trezor Suite.",
+      "zcash_mechanism": "Transparent t-address transactions only; shielded z-address transactions are not supported.",
+      "review_focus": "Users who need shielded ZEC must use another signer. Check which models are listed (Safe 3/5/7 vs 'all').",
+      "sources": [
+        {
+          "url": "https://trezor.io/coins/wallet/zcash",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "Trezor Zcash page"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "direct-source",
+      "lifecycle": "unverified",
+      "review_note": "Transparent only: balances and transfers are public on-chain."
+    },
+    {
+      "id": "zebra",
+      "name": "Zebra",
+      "category": "builders",
+      "website": "https://github.com/ZcashFoundation/zebra",
+      "networks": [
+        "Zcash"
+      ],
+      "kind": "infrastructure",
+      "description": "The Zcash Foundation's Rust consensus node, now the reference full validator after zcashd's end of life.",
+      "zcash_mechanism": "Validates all Zcash pools and upgrades including NU6.3/Ironwood; v7.0.0-rc.0 carries the NU7 testnet activation.",
+      "review_focus": "Which version is required for NU7 mainnet once the height is set? RPC parity with zcashd for exchanges? Audit status of recent releases?",
+      "sources": [
+        {
+          "url": "https://github.com/ZcashFoundation/zebra/releases",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "Zebra releases: v6.4.2 (2026-09-25), v7.0.0-rc.0 (2026-10-02)"
+        },
+        {
+          "url": "https://zcash.github.io/zcash/user/end-of-life.html",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "zcashd EOL page naming Zebra as successor"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "code-only",
+      "lifecycle": "not-applicable",
+      "review_note": "ZIP 258 says Zebra is expected to be the only full validator that follows the chain from NU6.3. Forks (Zakura, ZODL's zebra, Crosslink staging) also exist."
+    },
+    {
+      "id": "zakura",
+      "name": "Zakura",
+      "category": "builders",
+      "website": "https://zakura.com/",
+      "networks": [
+        "Zcash"
+      ],
+      "kind": "infrastructure",
+      "description": "A consensus-compatible Rust Zcash full node forked from Zebra, aimed at faster sync, pruning and a zcashd-compatible RPC mode.",
+      "zcash_mechanism": "Validates the Zcash chain; offers zcashd-compatibility mode for legacy integrations; shared Zakura Common crypto libraries host Tachyon-related work.",
+      "review_focus": "Who maintains it and how is it funded? Is the experimental P2P v2 stack off on mainnet (yes, per README) and audited? Has its consensus behaviour been cross-tested against Zebra?",
+      "sources": [
+        {
+          "url": "https://zakura.com/",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "Zakura site (Sean Bowe, Dev Ojha)"
+        },
+        {
+          "url": "https://github.com/zakura-core/zakura",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "zakura-core/zakura README"
+        },
+        {
+          "url": "https://github.com/zcash/zcash",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "zcashd README naming Zakura as a successor node"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "direct-source",
+      "lifecycle": "not-applicable",
+      "review_note": "Performance claims are self-reported and the P2P v2 stack is 'not yet production-hardened'. Repos also appear under zodl-inc, but Zakura's own pages do not name a maintainer organization."
+    },
+    {
+      "id": "zallet",
+      "name": "Zallet",
+      "category": "builders",
+      "website": "https://zcash.github.io/zallet/",
+      "networks": [
+        "Zcash"
+      ],
+      "kind": "developer-tool",
+      "description": "A Rust full-node RPC wallet designed to replace the zcashd embedded wallet, including import of zcashd wallet.dat files.",
+      "zcash_mechanism": "Holds transparent and shielded ZEC behind a zcashd-style JSON-RPC interface on top of Zebra/Zaino.",
+      "review_focus": "Which zcashd RPC methods are still missing? Is Ironwood fully supported? Has it been externally audited (docs say not fully reviewed)?",
+      "sources": [
+        {
+          "url": "https://zcash.github.io/zallet/",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "Zallet docs (beta, not fully reviewed)"
+        },
+        {
+          "url": "https://github.com/zcash/zallet/releases",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "zcash/zallet v0.1.0-beta.3 (2026-08-26)"
+        },
+        {
+          "url": "https://zcash.github.io/zcash/user/end-of-life.html",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "zcashd EOL page: migrate wallet.dat to Zallet"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "direct-source",
+      "lifecycle": "not-applicable",
+      "review_note": "Beta software with breaking changes possible. The zcashd EOL page calls it 'Alpha.4' while GitHub shows v0.1.0-beta.3; we used the GitHub version."
+    },
+    {
+      "id": "zaino",
+      "name": "Zaino",
+      "category": "builders",
+      "website": "https://github.com/zingolabs/zaino",
+      "networks": [
+        "Zcash"
+      ],
+      "kind": "infrastructure",
+      "description": "A Rust indexer from Zingo Labs that serves light and full clients and is intended to replace lightwalletd and zcashd indexing roles.",
+      "zcash_mechanism": "Indexes Zcash blocks and compact blocks from a Zebra backend for wallets, Zallet and explorers.",
+      "review_focus": "Is the release you deploy a blessed stable 'cycle' tag or an RC? NU7 readiness? Privacy of queries to hosted instances?",
+      "sources": [
+        {
+          "url": "https://github.com/zingolabs/zaino",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "Zaino README (gated release pipeline)"
+        },
+        {
+          "url": "https://github.com/zingolabs/zaino/releases",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "Zaino 0.10.1 (2026-09-29)"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "code-only",
+      "lifecycle": "not-applicable",
+      "review_note": "Light-client servers can see client IPs and query patterns unless used over Tor."
+    },
+    {
+      "id": "lightwalletd",
+      "name": "lightwalletd",
+      "category": "builders",
+      "website": "https://github.com/zcash/lightwalletd",
+      "networks": [
+        "Zcash"
+      ],
+      "kind": "infrastructure",
+      "description": "The Go backend that serves compact blocks over gRPC to Zcash light wallets.",
+      "zcash_mechanism": "Lets mobile wallets scan shielded outputs without running a full node; the server sees connection metadata but not decrypted notes.",
+      "review_focus": "Which backend node does it require after zcashd EOL? Who operates the default public servers? ZCG has an open RFP for lightwalletd maintenance; who maintains it now?",
+      "sources": [
+        {
+          "url": "https://github.com/zcash/lightwalletd/releases",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "lightwalletd v0.5.5 (2026-10-10)"
+        },
+        {
+          "url": "https://zcashcommunitygrants.org/",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "ZCG open RFP: lightwalletd infrastructure"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "code-only",
+      "lifecycle": "not-applicable",
+      "review_note": "The README security disclaimer still references ECC's security team, which is out of date after the 2026 team move."
+    },
+    {
+      "id": "librustzcash",
+      "name": "librustzcash",
+      "category": "builders",
+      "website": "https://github.com/zcash/librustzcash",
+      "networks": [
+        "Zcash"
+      ],
+      "kind": "developer-tool",
+      "description": "The core set of Rust crates (zcash_primitives, zcash_client_backend, zcash_address, etc.) used by Zcash nodes, wallets and SDKs.",
+      "zcash_mechanism": "Implements transaction building, note handling, addresses and wallet scanning for transparent and shielded pools.",
+      "review_focus": "Which crate versions support Ironwood/use_qsk? Note the README warning that these crates do not check consensus validity.",
+      "sources": [
+        {
+          "url": "https://github.com/zcash/librustzcash",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "zcash/librustzcash README"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "code-only",
+      "lifecycle": "not-applicable",
+      "review_note": "Forks exist (QEDIT ZSA branch, zodl-inc zakura-wallet-libraries)."
+    },
+    {
+      "id": "zcash-mobile-sdks",
+      "name": "Zcash Android and iOS (Swift) wallet SDKs",
+      "category": "builders",
+      "website": "https://github.com/zcash/zcash-android-wallet-sdk",
+      "networks": [
+        "Zcash"
+      ],
+      "kind": "developer-tool",
+      "description": "Light-client SDKs for building Android and iOS apps that send and receive shielded ZEC via lightwalletd.",
+      "zcash_mechanism": "Wrap librustzcash for on-device shielded scanning and transaction creation.",
+      "review_focus": "Should integrators track zcash/ or zodl-inc/ repositories? What is the audit status (READMEs still say not externally audited)? Ironwood support versions?",
+      "sources": [
+        {
+          "url": "https://github.com/zcash/zcash-android-wallet-sdk",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "zcash-android-wallet-sdk README"
+        },
+        {
+          "url": "https://github.com/zcash/zcash-swift-wallet-sdk/releases",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "zcash-swift-wallet-sdk 3.0.0 (2026-08-29)"
+        },
+        {
+          "url": "https://github.com/zodl-inc",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "zodl-inc GitHub org (zodl-android/swift-wallet-sdk forks)"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "code-only",
+      "lifecycle": "not-applicable",
+      "review_note": "Both the zcash/ and zodl-inc/ SDK repositories are active. The zcash/ READMEs carry beta and ECC-review disclaimers that look out of date."
+    },
+    {
+      "id": "zingolib",
+      "name": "zingolib",
+      "category": "builders",
+      "website": "https://github.com/zingolabs/zingolib",
+      "networks": [
+        "Zcash"
+      ],
+      "kind": "developer-tool",
+      "description": "Zingo Labs' Rust library and CLI exposing Zcash wallet functionality to apps, underlying the Zingo wallet.",
+      "zcash_mechanism": "Shielded wallet logic, sync (pepper-sync) and transaction creation for apps.",
+      "review_focus": "Ironwood support status in v6.x? API stability between major versions?",
+      "sources": [
+        {
+          "url": "https://github.com/zingolabs/zingolib/releases",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "zingolib v6.0.0 (2026-09-08)"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "code-only",
+      "lifecycle": "not-applicable",
+      "review_note": "Frequent major-version bumps (v5 June 2026, v6 Sept 2026)."
+    },
+    {
+      "id": "frost-zcash",
+      "name": "ZF FROST",
+      "category": "builders",
+      "website": "https://zfnd.org/",
+      "networks": [
+        "Zcash"
+      ],
+      "kind": "developer-tool",
+      "description": "The Zcash Foundation's Rust reference implementation of FROST threshold Schnorr signatures, used for shielded multisig.",
+      "zcash_mechanism": "Enables t-of-n signing of shielded (RedPallas) spends; used by wallets such as Zkool for shielded multisig.",
+      "review_focus": "Audit coverage of the Zcash-specific ciphersuites; how DKG and signing coordination are handled in the wallets that use it.",
+      "sources": [
+        {
+          "url": "https://zfnd.org/",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "Zcash Foundation site (ZF FROST)"
+        },
+        {
+          "url": "https://github.com/hhanh00/zkool2",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "Zkool README (FROST shielded multisig)"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "direct-source",
+      "lifecycle": "not-applicable",
+      "review_note": "A library, not a product; security depends on each wallet's integration."
+    },
+    {
+      "id": "zcash-foundation",
+      "name": "Zcash Foundation",
+      "category": "research",
+      "website": "https://zfnd.org/",
+      "networks": [
+        "Zcash"
+      ],
+      "kind": "organization",
+      "description": "A US 501(c)(3) public charity that builds Zebra and ZF FROST and runs Zcon and Zcash dev summits.",
+      "zcash_mechanism": "Maintains the reference consensus node, publishes audits and reports, and is a key-holder of the dev fund multisig.",
+      "review_focus": "Funding sources and runway; board composition (chair Andrew Miller per site); role in NU7 coordination.",
+      "sources": [
+        {
+          "url": "https://zfnd.org/",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "Zcash Foundation site"
+        },
+        {
+          "url": "https://zips.z.cash/zip-0271",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "ZIP 271 key-holder organizations"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "direct-source",
+      "lifecycle": "not-applicable",
+      "review_note": "Publishes Form 990s and quarterly reports."
+    },
+    {
+      "id": "zodl",
+      "name": "Zcash Open Development Lab (ZODL)",
+      "category": "research",
+      "website": "https://zodl.com/about/",
+      "networks": [
+        "Zcash"
+      ],
+      "kind": "organization",
+      "description": "A company formed in early 2026 by the former Electric Coin Company team, which continues Zcash core protocol work and the Zodl wallet.",
+      "zcash_mechanism": "Develops the Zodl wallet, protocol code and SDK forks; co-proposed Ironwood; maintains Zallet per the zcashd EOL page.",
+      "review_focus": "Corporate structure and funding (the press reports a $25M venture round, not verified here); how it relates to ECC, Bootstrap and the dev-fund key-holder role; open-source licensing of its forks.",
+      "sources": [
+        {
+          "url": "https://zodl.com/about/",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "ZODL about page"
+        },
+        {
+          "url": "https://www.theblock.co/post/384737/zcash-developers-form-new-company",
+          "type": "secondary",
+          "checked": "2026-10-15",
+          "title": "The Block: Zcash developers quit, form new company (2026-01-08)"
+        },
+        {
+          "url": "https://zcash.github.io/zcash/user/end-of-life.html",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "zcashd EOL page: Zallet from ZODL"
+        },
+        {
+          "url": "https://github.com/zodl-inc",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "zodl-inc GitHub org"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "direct-source",
+      "lifecycle": "changed",
+      "review_note": "A new for-profit entity: it is a successor team, not a renamed ECC. Its formation date and funding are taken from press reports, not from ZODL's own pages."
+    },
+    {
+      "id": "electric-coin-company",
+      "name": "Electric Coin Company (ECC)",
+      "category": "research",
+      "website": "https://electriccoin.co/",
+      "networks": [
+        "Zcash"
+      ],
+      "kind": "organization",
+      "description": "The company, owned by the nonprofit Bootstrap, that originally developed zcashd and Zashi; its development team left in January 2026 to form ZODL.",
+      "zcash_mechanism": "Historically built zcashd, librustzcash, SDKs and Zashi; still named as a dev-fund key-holder organization in ZIP 271.",
+      "review_focus": "What does ECC do now without its former team? Who exercises its key-holder role? Are electriccoin.co resources still maintained?",
+      "sources": [
+        {
+          "url": "https://electriccoin.co/",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "ECC site (latest post Dec 2025)"
+        },
+        {
+          "url": "https://zodl.com/about/",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "ZODL: team left ECC; core protocol development moved to ZODL"
+        },
+        {
+          "url": "https://www.theblock.co/post/384737/zcash-developers-form-new-company",
+          "type": "secondary",
+          "checked": "2026-10-15",
+          "title": "The Block: Zcash developers quit, form new company (2026-01-08)"
+        },
+        {
+          "url": "https://zodl.com/zodl-raises-25m-in-seed-funding/",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "ZODL seed announcement (2026-03-09)"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/0001720265/000119312526364568/zcsh__424b3_08.25.2026.htm",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "Zcash ETF 424B3 naming both ECC and ZODL (2026-08-24)"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "direct-source",
+      "lifecycle": "changed",
+      "review_note": "ECC's site shows no posts after Dec 2025 and only footer links to Zodl. Its current operations are unclear from primary sources."
+    },
+    {
+      "id": "shielded-labs",
+      "name": "Shielded Labs",
+      "category": "research",
+      "website": "https://shieldedlabs.net/",
+      "networks": [
+        "Zcash"
+      ],
+      "kind": "organization",
+      "description": "A Swiss, donation-funded Zcash support organization working on Crosslink, the Network Sustainability Mechanism, dynamic fees and Ironwood.",
+      "zcash_mechanism": "Researches and prototypes consensus changes (Crosslink feature net, NSM) and is a dev-fund key-holder; supported the security work that found the 2026 Orchard bug, per press reports.",
+      "review_focus": "Donor transparency; status of Crosslink upstreaming; scope of its 'Zero' enterprise project.",
+      "sources": [
+        {
+          "url": "https://shieldedlabs.net/",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "Shielded Labs site"
+        },
+        {
+          "url": "https://shieldedlabs.net/roadmap/",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "Shielded Labs roadmap"
+        },
+        {
+          "url": "https://github.com/ShieldedLabs",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "ShieldedLabs GitHub org"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "direct-source",
+      "lifecycle": "not-applicable",
+      "review_note": "Shielded Labs is an independent organization and is not part of ZF or ZODL."
+    },
+    {
+      "id": "zcash-community-grants",
+      "name": "Zcash Community Grants (ZCG)",
+      "category": "research",
+      "website": "https://zcashcommunitygrants.org/",
+      "networks": [
+        "Zcash"
+      ],
+      "kind": "organization",
+      "description": "A community-elected five-person committee that awards grants from the 8% ZCG dev-fund slice to independent Zcash teams.",
+      "zcash_mechanism": "Funded by protocol funding streams paid in ZEC (ZIP 1015/1016); publishes RFPs (e.g. lightwalletd maintenance).",
+      "review_focus": "Grant reporting and milestone verification; how its stream interacts with the coinholder-controlled fund; conflict-of-interest rules.",
+      "sources": [
+        {
+          "url": "https://zcashcommunitygrants.org/",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "ZCG site"
+        },
+        {
+          "url": "https://zips.z.cash/zip-1016",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "ZIP 1016: 8% to ZCG"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "direct-source",
+      "lifecycle": "not-applicable",
+      "review_note": "The site's USD treasury figures use an old ZEC price; check its dashboard for current balances."
+    },
+    {
+      "id": "zechub",
+      "name": "ZecHub",
+      "category": "research",
+      "website": "https://zechub.wiki/",
+      "networks": [
+        "Zcash"
+      ],
+      "kind": "organization",
+      "description": "A community-run Zcash education wiki and hub with guides, newsletters and ecosystem directories.",
+      "zcash_mechanism": "Educational content on shielded use, wallets and upgrades; links to community tools (ZecMap, Free2Z).",
+      "review_focus": "Content is community-written, so check dates against primary sources, especially after the 2026 Ironwood changes.",
+      "sources": [
+        {
+          "url": "https://zechub.wiki/",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "ZecHub wiki"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "direct-source",
+      "lifecycle": "not-applicable",
+      "review_note": "Its dashboard page did not render data when fetched, so we cannot rely on it for metrics."
+    },
+    {
+      "id": "zcash-block-explorer-nighthawk",
+      "name": "Zcash Block Explorer (zcashexplorer.app)",
+      "category": "research",
+      "website": "https://mainnet.zcashexplorer.app/",
+      "networks": [
+        "Zcash"
+      ],
+      "kind": "data",
+      "description": "An open-source Zcash block explorer credited to Nighthawk Apps, with transaction-type tags and viewing-key tools.",
+      "zcash_mechanism": "Shows transparent amounts and classifies transactions as shielded, mixed, deshielding or public; displays an Orchard pool total.",
+      "review_focus": "Is it maintained after Nighthawk's DarkFi pivot? Does it track Ironwood? Avoid pasting viewing keys into hosted tools.",
+      "sources": [
+        {
+          "url": "https://mainnet.zcashexplorer.app/",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "Zcash Block Explorer"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "direct-source",
+      "lifecycle": "unverified",
+      "review_note": "When fetched it showed only an 'Orchard Pool' total and no Ironwood figure, which may be stale after NU6.3. Shielded amounts are not visible by design."
+    },
+    {
+      "id": "zecblock-explorer",
+      "name": "ZecBlock (formerly CipherScan)",
+      "category": "research",
+      "website": "https://zecblock.com/",
+      "networks": [
+        "Zcash"
+      ],
+      "kind": "data",
+      "description": "A Zcash block explorer and privacy-analytics site with mainnet, testnet and Crosslink feature-net views.",
+      "zcash_mechanism": "Indexes blocks and transactions, with shielded-pool and Ironwood analytics sections; amounts inside shielded transactions are masked.",
+      "review_focus": "Who operates it (GitHub Kenbak/zecblock, Atmosphere Labs)? What methodology does it use for pool metrics? How do linked CipherSwap/CipherPay services handle custody?",
+      "sources": [
+        {
+          "url": "https://zecblock.com/",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "ZecBlock explorer"
+        },
+        {
+          "url": "https://github.com/QED-it/zipherscan",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "Zipherscan README: fork of CipherScan"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "direct-source",
+      "lifecycle": "changed",
+      "review_note": "The only evidence of the rename is cipherscan.app's 301 redirect to zecblock.com; ZecBlock's page does not mention a former name."
+    },
+    {
+      "id": "ironwood-migration-tracker",
+      "name": "Ironwood Migration tracker (Zodl)",
+      "category": "research",
+      "website": "https://ironwood.zodl.com/",
+      "networks": [
+        "Zcash"
+      ],
+      "kind": "data",
+      "description": "A ZODL dashboard that tracks how much ZEC has moved from the Orchard pool into Ironwood.",
+      "zcash_mechanism": "Reads chain value-pool data to show Orchard→Ironwood migration through the turnstile.",
+      "review_focus": "ZODL itself states it measures adoption, not supply verification. Cross-check against a self-run Zebra node's value-pool totals.",
+      "sources": [
+        {
+          "url": "https://ironwood.zodl.com/",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "Ironwood Migration | Zcash Supply Dashboard"
+        },
+        {
+          "url": "https://support.zodl.com/article/58-when-will-the-migration-to-ironwood-be-complete",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "Zodl support: tracker does not verify total supply"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "direct-source",
+      "lifecycle": "not-applicable",
+      "review_note": "Figures did not render in our fetch. Per ZODL, migration will never reach 100% because some coins are permanently inaccessible."
+    },
+    {
+      "id": "zcashd",
+      "name": "zcashd",
+      "category": "historical",
+      "website": "https://github.com/zcash/zcash",
+      "networks": [
+        "Zcash"
+      ],
+      "kind": "infrastructure",
+      "description": "The original C++ Zcash full node and embedded wallet, which reached end of life with a hard halt at block 3,417,100 on 18 July 2026.",
+      "zcash_mechanism": "Was the reference node and wallet for all pools; it does not implement NU6.3, so it cannot follow the current chain.",
+      "review_focus": "Anyone still running it must migrate: Zebra or Zakura for nodes, Zallet for wallet.dat. Check exchange and integrator dependencies on zcashd RPCs.",
+      "sources": [
+        {
+          "url": "https://github.com/zcash/zcash",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "zcash/zcash README (End of Life notice; repo archived)"
+        },
+        {
+          "url": "https://zcash.github.io/zcash/user/end-of-life.html",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "zcashd End of Life page"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "direct-source",
+      "lifecycle": "discontinued",
+      "review_note": "The repository is archived. The final release (6.20.0) shut down at the end-of-support height, and the wind-down was brought forward because of the Orchard vulnerability."
+    },
+    {
+      "id": "ywallet",
+      "name": "Ywallet",
+      "category": "historical",
+      "website": "https://github.com/hhanh00/zwallet",
+      "networks": [
+        "Zcash"
+      ],
+      "kind": "wallet",
+      "description": "A Zcash and Ycash light wallet by hhanh00 that no longer supports Zcash after the Ironwood upgrade.",
+      "zcash_mechanism": "Previously supported shielded ZEC (Sapling/Orchard, unified addresses); Zcash users are directed to migrate to Zkool.",
+      "review_focus": "Users should import accounts into Zkool or another Ironwood-capable wallet; Ycash support continues.",
+      "sources": [
+        {
+          "url": "https://github.com/hhanh00/zwallet",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "zwallet README (deprecation notice)"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "direct-source",
+      "lifecycle": "discontinued",
+      "review_note": "Discontinued for Zcash only, per its README ('no longer supports Zcash since the Ironwood update'); Ycash support continues."
+    },
+    {
+      "id": "nighthawk-wallet",
+      "name": "Nighthawk Wallet",
+      "category": "historical",
+      "website": "https://nighthawkwallet.com/",
+      "networks": [
+        "Zcash",
+        "DarkFi"
+      ],
+      "kind": "wallet",
+      "description": "A formerly Zcash-focused mobile wallet whose current releases and website target the DarkFi testnet.",
+      "zcash_mechanism": "Earlier versions (v2.x, last stable Nov 2024) were shielded Zcash wallets; v3.0 is for DarkFi's DRK token.",
+      "review_focus": "Is the v2 Zcash app still maintained or compatible with Ironwood? Users should verify funds can be restored into a current Zcash wallet.",
+      "sources": [
+        {
+          "url": "https://github.com/nighthawk-apps/nighthawk-android-wallet",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "Nighthawk Android repo: 'Nighthawk Wallet 3.0 for DarkFi Testnet'"
+        },
+        {
+          "url": "https://nighthawkwallet.com/",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "Nighthawk site (DarkFi focus)"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "direct-source",
+      "lifecycle": "changed",
+      "review_note": "Pivoted to DarkFi. The publisher does not state whether Zcash support has ended, but no Zcash release has appeared since v2.2.16 (Nov 2024)."
+    },
+    {
+      "id": "near-intents-zec",
+      "name": "NEAR Intents (ZEC routes)",
+      "category": "swaps",
+      "website": "https://near-intents.org",
+      "networks": [
+        "Zcash",
+        "NEAR",
+        "Ethereum",
+        "Solana",
+        "Bitcoin",
+        "Starknet",
+        "Aptos"
+      ],
+      "kind": "protocol",
+      "description": "Intent-based cross-chain swap network whose 1Click API quotes swaps into and out of native ZEC, settled by market makers through a verifier contract on NEAR.",
+      "zcash_mechanism": "Users send ZEC to a transparent (t1/t3) deposit address controlled by the POA Bridge; ZEC is represented on NEAR as nep141:zec.omft.near and paid out to a transparent Zcash address. The docs mark Zcash as transparent-only.",
+      "review_focus": "Who are the POA Bridge authorities and how are the Zcash deposit keys held? What happens to a deposit sent from or to a shielded address? What are the refund rules and thresholds for failed or mis-addressed swaps? Which market makers quote ZEC, and can quotes be censored?",
+      "sources": [
+        {
+          "url": "https://docs.near-intents.org/resources/chain-support",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "NEAR Intents chain support: Zcash partially supported, transparent addresses only"
+        },
+        {
+          "url": "https://docs.near-intents.org/integration/bridging/overview",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "NEAR Intents token bridges: POA Bridge covers Zcash"
+        },
+        {
+          "url": "https://1click.chaindefuser.com/v0/tokens",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "NEAR Intents 1Click token list (GET), lists nep141:zec.omft.near and ZEC on Solana/Starknet/Aptos, 2026-10-15"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "direct-source",
+      "lifecycle": "mainnet-announced",
+      "review_note": "Custodial in practice: ZEC sits with the Proof-of-Authority bridge operators while in Intents. Every route crosses a transparent Zcash address, so shielded privacy does not carry across; wallets can only reduce linkability by shielding before and after."
+    },
+    {
+      "id": "zec-on-near-poa",
+      "name": "ZEC on NEAR Intents (zec.omft.near, POA Bridge)",
+      "category": "zec-assets",
+      "website": "https://docs.near-intents.org/integration/bridging/overview",
+      "networks": [
+        "Zcash",
+        "NEAR",
+        "Starknet",
+        "Aptos"
+      ],
+      "kind": "asset",
+      "description": "Bridged ZEC token (nep141:zec.omft.near) issued by the NEAR Intents Proof-of-Authority bridge, also listed by the 1Click API as ZEC on Starknet and Aptos.",
+      "zcash_mechanism": "Native ZEC is held at transparent Zcash addresses by the POA Bridge, which credits zec.omft.near on NEAR; the Starknet and Aptos ZEC tokens listed by the API are further bridged representations. None of these tokens are shielded.",
+      "review_focus": "Is there published proof of reserves for the Zcash side? How many POA signers exist and who are they? How are the Starknet and Aptos ZEC tokens minted and redeemed, and by which bridge? Is there a pause or freeze authority?",
+      "sources": [
+        {
+          "url": "https://docs.near-intents.org/integration/bridging/overview",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "NEAR Intents token bridges: POA Bridge covers Zcash"
+        },
+        {
+          "url": "https://1click.chaindefuser.com/v0/tokens",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "NEAR Intents 1Click token list (GET), lists nep141:zec.omft.near and ZEC on Solana/Starknet/Aptos, 2026-10-15"
+        },
+        {
+          "url": "https://docs.near-intents.org/resources/chain-support",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "NEAR Intents chain support: Zcash partially supported, transparent addresses only"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "direct-source",
+      "lifecycle": "mainnet-announced",
+      "review_note": "A Proof-of-Authority (trusted-operator) IOU for ZEC; holders depend on the bridge operators for redemption. Wrapped ZEC on NEAR, Starknet or Aptos is a transparent token on those chains and has no Zcash shielded privacy."
+    },
+    {
+      "id": "omni-bridge-zec-solana",
+      "name": "Omni Bridge ZEC on Solana",
+      "category": "zec-assets",
+      "website": "https://docs.near.org/chain-abstraction/omnibridge/overview",
+      "networks": [
+        "Zcash",
+        "NEAR",
+        "Solana"
+      ],
+      "kind": "asset",
+      "description": "SPL token named Zcash (ZEC), mint A7bdiYdS5GjqGFtxf17ppRHtDKPkkRqbKtR27dxvQXaS, whose mint authority is the NEAR Omni Bridge Solana program's authority PDA; it is the ZEC listed by NEAR Intents on Solana and used by Kamino's ZCASH market.",
+      "zcash_mechanism": "Omni Bridge mints the SPL token on Solana against ZEC held on the NEAR side. The NEAR-side backing token is not confirmed here; NEAR Intents docs say Zcash enters via the POA Bridge, while docs.near.org lists Zcash as an Omni Bridge chain (light client plus Chain Signatures). This may be two bridge layers deep. Transparent on Solana.",
+      "review_focus": "Which NEAR token backs the Solana mint: zec.omft.near (POA) or an Omni-native Zcash connector? How many bridge layers sit between the SPL token and native ZEC? Who can upgrade the Omni Bridge Solana program? Is the Wormhole leg used for Solana messages?",
+      "sources": [
+        {
+          "url": "https://docs.near.org/chain-abstraction/omnibridge/overview",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "NEAR docs Omni Bridge overview: lists Zcash (light client + Chain Signatures)"
+        },
+        {
+          "url": "https://docs.near-intents.org/learn/omni-bridge/overview",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "NEAR Intents docs: Omni Bridge chains (Zcash not listed; other chains use POA/HOT)"
+        },
+        {
+          "url": "https://1click.chaindefuser.com/v0/tokens",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "NEAR Intents 1Click token list (GET), lists nep141:zec.omft.near and ZEC on Solana/Starknet/Aptos, 2026-10-15"
+        },
+        {
+          "url": "https://api.mainnet-beta.solana.com",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "Solana RPC getAccountInfo(A7bdiYdS…XaS, jsonParsed): mintAuthority FvULawNPGBbuwYus74ECaQoV1oH9Tk6XPN7VPN51NYds"
+        },
+        {
+          "url": "https://github.com/near/omni-cli-rs/blob/main/src/chains/svm/idl.rs",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "near/omni-cli-rs: FvULaw… is the Omni bridge program 'authority' PDA"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "code-only",
+      "lifecycle": "unverified",
+      "review_note": "Possibly a double-wrapped IOU (Zcash, then a NEAR bridge token, then an Omni-minted SPL). Holding or lending it on Solana is fully transparent. Its backing depends on NEAR bridge operators, not on the Zcash protocol."
+    },
+    {
+      "id": "zenzec",
+      "name": "zenZEC (Zenrock)",
+      "category": "zec-assets",
+      "website": "https://www.zenrocklabs.io",
+      "networks": [
+        "Zcash",
+        "Solana"
+      ],
+      "kind": "asset",
+      "description": "Zenrock's Decentralized Custody Token for Zcash, minted on Solana (mint JDt9rRGaieF6aN1cJkXFeUmsy7ZE4yY3CZb8tVMXVroS) against ZEC locked in Zenrock's decentralized MPC custody network.",
+      "zcash_mechanism": "Native ZEC is deposited to addresses controlled by Zenrock's dMPC signer network (zrChain), and zenZEC is minted 1:1 on Solana. Whether deposits or redemptions can use shielded addresses is not documented on the fetched page. zenZEC on Solana is transparent.",
+      "review_focus": "Who runs the dMPC signer nodes, what is the signing threshold, and can the set be changed? Are deposit and redemption addresses transparent or shielded? Is there a public proof of reserves? Who holds the Solana mint authority (6kgpWR…)? Zenrock's docs site returned DEPLOYMENT_DISABLED on 2026-10-15; where is the current documentation?",
+      "sources": [
+        {
+          "url": "https://www.zenrocklabs.io/",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "Zenrock homepage: 'Mint zenZEC – Zcash on Solana', DCT standard, dMPC custody"
+        },
+        {
+          "url": "https://lite-api.jup.ag/tokens/v2/search?query=JDt9rRGaieF6aN1cJkXFeUmsy7ZE4yY3CZb8tVMXVroS",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "Jupiter token API: 'Zenrock ZEC' zenZEC, verified tag"
+        },
+        {
+          "url": "https://api-v3.raydium.io/pools/info/mint?mint1=JDt9rRGaieF6aN1cJkXFeUmsy7ZE4yY3CZb8tVMXVroS",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "Raydium API: zenZEC CLMM pools (USDC, WSOL, USD1, ZEC)"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "direct-source",
+      "lifecycle": "unverified",
+      "review_note": "Custody sits with Zenrock's MPC network rather than one custodian, but holders still trust that signer set. The homepage offers minting, but the fetched pages do not state explicitly that zenZEC is live, so it is kept unverified. On Solana it is a transparent token with no Zcash privacy."
+    },
+    {
+      "id": "unit-zec-hyperliquid",
+      "name": "Unit Zcash (UZEC) on Hyperliquid",
+      "category": "zec-assets",
+      "website": "https://hyperunit.xyz",
+      "networks": [
+        "Zcash",
+        "Hyperliquid"
+      ],
+      "kind": "bridge",
+      "description": "Unit's asset-tokenization layer, which credits deposits of native ZEC as the HIP-1 spot token UZEC (Unit Zcash) on Hyperliquid's HyperCore and fulfils withdrawals back to Zcash.",
+      "zcash_mechanism": "Users deposit to a Zcash address generated by Unit's MPC Guardian Network and tied to their Hyperliquid address. Withdrawals are paid from Unit's Zcash treasury address, which is transparent (t1…). Deposits need 100 Zcash confirmations.",
+      "review_focus": "Who are Unit's guardians and what is the signing threshold? Can deposits come from shielded addresses, or only transparent ones? Are treasury reserves auditable on-chain against UZEC supply? Who controls the multisig that deployed the HyperCore token?",
+      "sources": [
+        {
+          "url": "https://docs.hyperunit.xyz/llms-full.txt",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "Unit docs: mainnet token table (ZEC/UZEC, Zcash Mainnet), Zcash treasury t1KbKk…, 100 confirmations"
+        },
+        {
+          "url": "https://api.hyperliquid.xyz/info",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "Hyperliquid API POST {type:spotMeta}: UZEC 'Unit Zcash' token 0x1c994ad3…"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "direct-source",
+      "lifecycle": "mainnet-announced",
+      "review_note": "UZEC is custodied by Unit's MPC guardian set, so it is an IOU. Deposit and withdrawal flows go through transparent Zcash addresses, and trading UZEC on Hyperliquid is fully public."
+    },
+    {
+      "id": "bitfrost-bzec",
+      "name": "Bitfrost Native ZEC (BZEC) on Hyperliquid",
+      "category": "zec-assets",
+      "website": "https://app.hyperliquid.xyz/explorer/token/0x33b2c5252e8ea8431808129c41668129",
+      "networks": [
+        "Zcash",
+        "Hyperliquid"
+      ],
+      "kind": "asset",
+      "description": "Hyperliquid spot token named 'Bitfrost Native ZEC' (BZEC), with a HyperEVM contract, that third-party guides describe as ZEC bridged by Bitfrost's HYPE-staked validator set.",
+      "zcash_mechanism": "Reportedly, native ZEC is deposited to the Bitfrost bridge and BZEC is credited on HyperCore. The issuer's mechanism and custody could not be checked against a primary source because the bitfrost.xyz site returned an S3 NoSuchBucket error on 2026-10-15. Transparent on Hyperliquid.",
+      "review_focus": "Is the Bitfrost bridge still operating and redeeming BZEC? Who are the validators and what secures the Zcash keys? Where are the official docs now? Is there a published reserve address? Are users holding BZEC able to withdraw?",
+      "sources": [
+        {
+          "url": "https://api.hyperliquid.xyz/info",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "Hyperliquid API POST {type:spotMeta}: BZEC 'Bitfrost Native ZEC', evm 0xbe068bb3…"
+        },
+        {
+          "url": "https://bitfrost.xyz",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "bitfrost.xyz returned S3 NoSuchBucket (site unreachable) on 2026-10-15"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "ecosystem-only",
+      "lifecycle": "unverified",
+      "review_note": "The issuer site was unreachable during review, so redemption status is unknown and should be treated as high-risk until Bitfrost confirms it. This is not evidence of a shutdown. Like other wrapped ZEC, BZEC carries no shielded privacy."
+    },
+    {
+      "id": "hyperliquid-zec-perp",
+      "name": "Hyperliquid ZEC perpetual",
+      "category": "trading",
+      "website": "https://hyperliquid.xyz",
+      "networks": [
+        "Hyperliquid"
+      ],
+      "kind": "exchange",
+      "description": "USDC-margined ZEC perpetual futures market in Hyperliquid's core (non-HIP-3) perp universe, alongside ZEC spot pairs that use bridged tokens such as UZEC.",
+      "zcash_mechanism": "Synthetic exposure only: the perp is margined in USDC and priced by oracle, so no ZEC is held or moved. Spot ZEC on Hyperliquid uses bridged tokens (see the Unit and Bitfrost records). All positions are public.",
+      "review_focus": "Which oracle sources price ZEC, and how robust is it to thin spot markets? What leverage and margin tiers apply? What is the liquidation and auto-deleveraging policy? How exposed are users to the validator set and the bridge?",
+      "sources": [
+        {
+          "url": "https://api.hyperliquid.xyz/info",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "Hyperliquid API POST {type:meta}: ZEC in core perp universe (maxLeverage field present), 2026-10-15"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "direct-source",
+      "lifecycle": "unverified",
+      "review_note": "Operational per the Hyperliquid info API on 2026-10-15. This is price exposure, not ZEC custody. Trades, positions and liquidations are fully public on-chain, the opposite of shielded use."
+    },
+    {
+      "id": "dydx-zec-perp",
+      "name": "dYdX ZEC-USD perpetual",
+      "category": "trading",
+      "website": "https://dydx.trade",
+      "networks": [
+        "dYdX Chain"
+      ],
+      "kind": "exchange",
+      "description": "ZEC-USD perpetual market on the dYdX Chain order book.",
+      "zcash_mechanism": "Synthetic, USDC-margined perpetual; no ZEC is held or transferred. Positions are public on dYdX Chain.",
+      "review_focus": "How was the market listed (governance or permissionless)? Which oracle feeds price ZEC? What are the margin fractions and liquidation rules? How deep is liquidity relative to position limits?",
+      "sources": [
+        {
+          "url": "https://indexer.dydx.trade/v4/perpetualMarkets?ticker=ZEC-USD",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "dYdX indexer: ZEC-USD status ACTIVE, 2026-10-15"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "direct-source",
+      "lifecycle": "unverified",
+      "review_note": "Operational per the dYdX indexer on 2026-10-15. This is synthetic price exposure with no Zcash custody and no privacy."
+    },
+    {
+      "id": "lighter-zec-perp",
+      "name": "Lighter ZEC perpetual",
+      "category": "trading",
+      "website": "https://lighter.xyz",
+      "networks": [
+        "Ethereum"
+      ],
+      "kind": "exchange",
+      "description": "ZEC perpetual market on Lighter, a ZK-rollup order-book perp exchange.",
+      "zcash_mechanism": "Synthetic, USDC-margined perpetual; no ZEC is held or transferred.",
+      "review_focus": "Which oracle prices ZEC? What escape-hatch or forced-withdrawal path exists if the sequencer halts? What leverage limits apply to ZEC? How does liquidation work?",
+      "sources": [
+        {
+          "url": "https://mainnet.zklighter.elliot.ai/api/v1/orderBooks",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "Lighter API orderBooks: ZEC status active, 2026-10-15"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "direct-source",
+      "lifecycle": "unverified",
+      "review_note": "Operational per the Lighter API on 2026-10-15. This is synthetic exposure only. Zcash privacy does not apply."
+    },
+    {
+      "id": "aster-zec-perp",
+      "name": "Aster ZECUSDT perpetual",
+      "category": "trading",
+      "website": "https://www.asterdex.com",
+      "networks": [
+        "BNB Chain"
+      ],
+      "kind": "exchange",
+      "description": "ZECUSDT perpetual futures market on the Aster perp DEX.",
+      "zcash_mechanism": "Synthetic, USDT-margined perpetual; no ZEC is held or transferred.",
+      "review_focus": "Which oracle and index price ZECUSDT? How custodial is the margin-account model? What are the liquidation and insurance-fund mechanics?",
+      "sources": [
+        {
+          "url": "https://fapi.asterdex.com/fapi/v1/exchangeInfo",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "Aster futures exchangeInfo: ZECUSDT listed, 2026-10-15"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "direct-source",
+      "lifecycle": "unverified",
+      "review_note": "Listed per Aster's exchangeInfo API on 2026-10-15. This is synthetic exposure with no Zcash custody or privacy."
+    },
+    {
+      "id": "maya-protocol-zec",
+      "name": "Maya Protocol (MAYAChain) ZEC pool",
+      "category": "swaps",
+      "website": "https://www.mayaprotocol.com",
+      "networks": [
+        "Zcash",
+        "Bitcoin",
+        "Ethereum",
+        "Arbitrum",
+        "Cardano",
+        "Dash",
+        "THORChain"
+      ],
+      "kind": "protocol",
+      "description": "THORChain-fork cross-chain AMM with a native ZEC.ZEC pool that swaps ZEC against assets such as BTC, ETH and stablecoins without wrapped tokens.",
+      "zcash_mechanism": "ZEC is held in a transparent threshold-signature vault (t1 inbound address). Maya also accepts a shielded memo: the deposit sends value to the transparent vault plus a 0-value shielded note carrying the swap memo to Maya's unified address. Maya publishes the incoming viewing key (UIVK) for that address, so anyone can decrypt the memo.",
+      "review_focus": "How many nodes sign the ZEC vault, and what bond or slash backs them? Can outbound payouts go to shielded (u1) addresses? Is publishing the UIVK understood by users, given it makes the memo public? What are the halt and solvency-check controls (HALTZECCHAIN, SOLVENCYHALTZECCHAIN)?",
+      "sources": [
+        {
+          "url": "https://mayanode.mayachain.info/mayachain/pools",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "MAYANode pools: ZEC.ZEC status Available, 2026-10-15"
+        },
+        {
+          "url": "https://mayanode.mayachain.info/mayachain/inbound_addresses",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "MAYANode inbound_addresses: ZEC vault t1bRYL…, shielded_memo_config enabled with published UIVK"
+        },
+        {
+          "url": "https://mayanode.mayachain.info/mayachain/mimir",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "MAYANode mimir: HALTZECTRADING 0, ZECSHIELDEDMEMOENABLED 1"
+        },
+        {
+          "url": "https://www.mayaprotocol.com/",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "Maya Protocol homepage and Academy (states Zcash integration)"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "direct-source",
+      "lifecycle": "unverified",
+      "review_note": "Operational per the MAYANode API on 2026-10-15. Funds in flight sit in a bonded-node vault, not with a single custodian. The value output always hits a transparent vault, and the 'shielded' memo can be read by anyone holding the published viewing key, so the swap is not private."
+    },
+    {
+      "id": "thorchain-zec",
+      "name": "THORChain ZEC pool",
+      "category": "swaps",
+      "website": "https://thorchain.org",
+      "networks": [
+        "Zcash",
+        "THORChain",
+        "Bitcoin",
+        "Ethereum"
+      ],
+      "kind": "protocol",
+      "description": "Cross-chain AMM network that added a Zcash chain client in THORNode and reportedly activated a ZEC liquidity pool on 2026-10-02 ahead of native ZEC swaps.",
+      "zcash_mechanism": "THORNode's Bifrost includes a Zcash UTXO client that observes and signs ZEC transactions from node-controlled TSS vaults. No shielded, Sapling or Orchard handling was found in zcash.go, so the integration appears to be transparent-only.",
+      "review_focus": "Are ZEC swaps (not just the pool) enabled now? How deep is the pool, given the publisher warned that liquidity is shallow? Are inbound and outbound addresses transparent only? What halt controls exist for ZEC? Has the Zcash client been audited?",
+      "sources": [
+        {
+          "url": "https://gitlab.com/thorchain/thornode/-/tree/develop/bifrost/pkg/chainclients/utxo",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "THORNode develop: utxo/zcash.go, zcash_signer, zcash_consolidation files"
+        },
+        {
+          "url": "https://gitlab.com/thorchain/thornode/-/blob/develop/common/chain.go",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "THORNode common/chain.go: ZECChain defined among UTXO chains"
+        },
+        {
+          "url": "https://crypto.news/thorchain-launches-zcash-pool-trading-comes-next/",
+          "type": "secondary",
+          "checked": "2026-10-15",
+          "title": "crypto.news quoting THORChain X post: ZEC pool live, 'Trading is the next step', 2 Oct 2026"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "code-only",
+      "lifecycle": "unverified",
+      "review_note": "Primary evidence is code only; the pool launch reached us through press quoting THORChain's X post, and swap go-live is unconfirmed (a single 9 Oct 2026 report claims it). Vaults are transparent, so swaps break the shielded link."
+    },
+    {
+      "id": "swapkit-zec",
+      "name": "SwapKit (ZEC routes)",
+      "category": "swaps",
+      "website": "https://swapkit.dev",
+      "networks": [
+        "Zcash",
+        "MAYAChain",
+        "NEAR",
+        "Bitcoin",
+        "Ethereum",
+        "Solana"
+      ],
+      "kind": "developer-tool",
+      "description": "Swap aggregation API and SDK used by wallets, which routes ZEC swaps through MAYAChain and NEAR Intents.",
+      "zcash_mechanism": "Transparent t1/t3 sources route through MAYAChain or NEAR Intents. Unified (u1/Orchard) sources route only through MAYAChain: the wallet builds a transaction sending value to a transparent inbound address plus a 0-value shielded memo note. Sapling (zs) addresses are rejected.",
+      "review_focus": "Which provider does each quote use, and is that disclosed to users? How are refund addresses handled for shielded sources? Does SwapKit do address screening on transparent swaps? What data does the API log about users?",
+      "sources": [
+        {
+          "url": "https://docs.swapkit.dev/spotlights/chain-specific-guides/zcash-shielded-and-unified-addresses",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "SwapKit docs: Zcash shielded and unified addresses (MAYAChain only for u1)"
+        },
+        {
+          "url": "https://swapkit.dev/blog/swapkit-zcash-integration/",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "SwapKit blog: Zcash integration via Maya and NEAR Intents (transparent at launch)"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "direct-source",
+      "lifecycle": "mainnet-announced",
+      "review_note": "Non-custodial aggregator, but funds pass through the custody of the underlying provider (Maya vault or POA bridge). Even the 'unified' route sends value to a transparent vault, so privacy is limited."
+    },
+    {
+      "id": "zodl-swaps-crosspay",
+      "name": "Zodl (formerly Zashi) Swaps and CrossPay",
+      "category": "swaps",
+      "website": "https://zodl.com",
+      "networks": [
+        "Zcash",
+        "NEAR",
+        "Bitcoin",
+        "Ethereum",
+        "Solana"
+      ],
+      "kind": "wallet",
+      "description": "Self-custodial Zcash mobile wallet (renamed from Zashi to Zodl in 3.0.0, Feb 2026) with built-in swaps to and from ZEC and CrossPay payments from shielded ZEC to other chains, both powered by NEAR Intents.",
+      "zcash_mechanism": "The wallet spends from its shielded balance to a NEAR Intents transparent deposit address (swap out, added in 2.2.0 on 2025-08-27) or receives swapped ZEC and shields it (swap in, added in 2.4.0 on 2025-09-30). CrossPay pays the recipient in another asset on a NEAR-supported chain.",
+      "review_focus": "How are ephemeral transparent addresses used for swap-in, and are they reused? Users should note that NEAR does not refund swaps under $300 sent to a wrong address or network (warning added 2026-09-15). What data reaches NEAR Intents and the market makers? Is Tor used for quote requests?",
+      "sources": [
+        {
+          "url": "https://zodl.com/",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "Zodl homepage: Swaps and CrossPay powered by NEAR Intents"
+        },
+        {
+          "url": "https://github.com/zodl-inc/zodl-android/blob/main/CHANGELOG.md",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "zodl-android CHANGELOG: 2.2.0 (2025-08-27) swap shielded ZEC out; 2.4.0 (2025-09-30) swap to ZEC; 3.0.0 rebrand to Zodl; 3.13.0 $300 refund warning"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "direct-source",
+      "lifecycle": "mainnet-announced",
+      "review_note": "The wallet is self-custodial, but during a swap funds are in NEAR Intents and POA bridge custody. The Zcash side of the route uses a transparent deposit address, so the swap is linkable on the other chain even though the Zodl balance stays shielded."
+    },
+    {
+      "id": "kamino-zcash-market",
+      "name": "Kamino ZCASH Market",
+      "category": "lending-yield",
+      "website": "https://kamino.com",
+      "networks": [
+        "Solana"
+      ],
+      "kind": "protocol",
+      "description": "Curated isolated lending market on Kamino (Solana) with ZEC as collateral and USDC as the borrowable asset, reported as launched in September 2026 and curated by Allez Labs.",
+      "zcash_mechanism": "Collateral is the Omni Bridge ZEC SPL token (mint A7bdiYdS…XaS), not native ZEC. No ZEC moves on Zcash. Positions are public on Solana.",
+      "review_focus": "What oracle prices ZEC on Solana, and how is it protected against thin liquidity? What are the risk parameters, and who can change them? How would a bridge failure (Omni or POA) be handled for this collateral? Who is the curator, and what are their powers?",
+      "sources": [
+        {
+          "url": "https://api.kamino.finance/v2/kamino-market",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "Kamino API: 'ZCASH Market' GBJ3bzUi…, isCurated true"
+        },
+        {
+          "url": "https://api.kamino.finance/kamino-market/GBJ3bzUiMfwC9ugaF3MM68EXMDyTUb5UryRRAcVjEowd/reserves/metrics",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "Kamino API reserves: ZEC (A7bdiYdS…) and USDC"
+        },
+        {
+          "url": "https://cryptobriefing.com/kamino-zec-backed-borrowing-solana-usdc/",
+          "type": "secondary",
+          "checked": "2026-10-15",
+          "title": "Crypto Briefing: Kamino ZEC-backed borrowing, 7 Sep 2026"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "direct-source",
+      "lifecycle": "unverified",
+      "review_note": "Operational per the Kamino API on 2026-10-15. Users stack lending risk on top of bridge risk (possibly two bridges deep). Collateral and loans are fully transparent on Solana, so there are no Zcash privacy properties."
+    },
+    {
+      "id": "raydium-zec-pools",
+      "name": "Raydium ZEC and zenZEC pools",
+      "category": "trading",
+      "website": "https://raydium.io",
+      "networks": [
+        "Solana"
+      ],
+      "kind": "protocol",
+      "description": "Permissionless Solana AMM hosting concentrated-liquidity pools for both the Omni-bridged ZEC SPL token and Zenrock's zenZEC.",
+      "zcash_mechanism": "Trades bridged SPL representations of ZEC; no native ZEC moves. All activity is public on Solana.",
+      "review_focus": "Which ZEC mint is in a given pool? Many similarly named tokens exist on Solana, so how can users verify the mint? How deep is liquidity, and which pools are permissionless or unverified?",
+      "sources": [
+        {
+          "url": "https://api-v3.raydium.io/pools/info/mint?mint1=A7bdiYdS5GjqGFtxf17ppRHtDKPkkRqbKtR27dxvQXaS",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "Raydium API: CLMM/standard pools with Omni ZEC"
+        },
+        {
+          "url": "https://api-v3.raydium.io/pools/info/mint?mint1=JDt9rRGaieF6aN1cJkXFeUmsy7ZE4yY3CZb8tVMXVroS",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "Raydium API: CLMM pools with zenZEC"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "direct-source",
+      "lifecycle": "unverified",
+      "review_note": "Operational per the Raydium API on 2026-10-15. There are many imitation 'ZEC' tokens on Solana, so users must check the mint. These pools offer no Zcash privacy."
+    },
+    {
+      "id": "ztarknet",
+      "name": "Ztarknet",
+      "category": "zec-assets",
+      "website": "https://ztarknet.cash",
+      "networks": [
+        "Zcash",
+        "Starknet"
+      ],
+      "kind": "network",
+      "description": "Proposed Starknet-style L2 that runs Cairo programs and settles to Zcash L1 through a draft Transparent Zcash Extension that verifies Circle STARK proofs.",
+      "zcash_mechanism": "Settlement would rely on a draft TZE ZIP (zcash/zips PR 1107) on a Zebra fork. No ZEC bridge or deposit mechanism is specified. A developer quickstart references a faucet-funded network, but the faucet was unreachable on 2026-10-15.",
+      "review_focus": "How would ZEC move into and out of the L2, and with what custody? Has the TZE ZIP any path to activation? What is the data-availability design? Is there an operating devnet, and who runs the sequencer?",
+      "sources": [
+        {
+          "url": "https://github.com/Ztarknet/ztarknet",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "Ztarknet README: 'Status: concept + references for a PoC'"
+        },
+        {
+          "url": "https://github.com/Ztarknet/quickstart",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "Ztarknet quickstart: deploy a Noir app with a faucet-funded account"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "code-only",
+      "lifecycle": "research",
+      "review_note": "Research or proof-of-concept only. There is no ZEC on it and no bridge, and since the TZE is transparent, the privacy of any future ZEC moved to it is unclear."
+    },
+    {
+      "id": "wzec-ethereum",
+      "name": "Wrapped ZEC (WZEC, Ethereum)",
+      "category": "historical",
+      "website": "https://www.wrapped.com",
+      "networks": [
+        "Zcash",
+        "Ethereum"
+      ],
+      "kind": "asset",
+      "description": "Custodial ERC-20 representation of ZEC launched in October 2020 by Tokensoft's 'Wrapped' with Anchorage custody; the contract 0x4A64…6E10 still reports name 'Wrapped ZEC'.",
+      "zcash_mechanism": "Native ZEC was held by a qualified custodian (Anchorage), with WZEC minted and burned on Ethereum by the issuer. WZEC on Ethereum is fully transparent.",
+      "review_focus": "Is redemption to ZEC still offered? wrapped.com now markets RWA services and does not mention WZEC. Who holds the mint and burn roles today? Is there any attestation of reserves?",
+      "sources": [
+        {
+          "url": "https://ethereum-rpc.publicnode.com",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "Ethereum eth_call on 0x4A64515E5E1d1073e83f30cB97BEd20400b66E10: name 'Wrapped ZEC', symbol 'WZEC', nonzero supply"
+        },
+        {
+          "url": "https://www.wrapped.com",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "wrapped.com homepage (2026): RWA/stablecoin services, no WZEC mention"
+        },
+        {
+          "url": "https://github.com/MyEtherWallet/ethereum-lists/blob/master/src/tokens/eth/0x4A64515E5E1d1073e83f30cB97BEd20400b66E10.json",
+          "type": "secondary",
+          "checked": "2026-10-15",
+          "title": "Token list entry attributing the contract to WZEC"
+        },
+        {
+          "url": "https://www.coindesk.com/wrapped-zcash-ethereum-tokensoft-anchorage",
+          "type": "secondary",
+          "checked": "2026-10-15",
+          "title": "CoinDesk: Wrapped Zcash on Ethereum via Tokensoft/Anchorage, Oct 2020"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "code-only",
+      "lifecycle": "unverified",
+      "review_note": "A custodial IOU with unclear current redemption. The issuer's site no longer references it, but there is no publisher shutdown notice. It never had Zcash privacy on Ethereum."
+    },
+    {
+      "id": "renzec",
+      "name": "renZEC (Ren 1.0)",
+      "category": "historical",
+      "website": "https://medium.com/renprotocol",
+      "networks": [
+        "Zcash",
+        "Ethereum"
+      ],
+      "kind": "asset",
+      "description": "ZEC representation minted by the Ren 1.0 MPC bridge network on Ethereum and other chains; Ren announced the sunset of Ren 1.0 in November 2022 after Alameda's bankruptcy.",
+      "zcash_mechanism": "ZEC was held by the RenVM darknode MPC network at transparent addresses, and renZEC was minted on host chains. Minting was disabled and the network was to shut down 30 days later.",
+      "review_focus": "Are any renZEC balances still unredeemable? Did Ren 2.0 ever support Zcash? Are legacy renZEC liquidity pools still live and trapping users?",
+      "sources": [
+        {
+          "url": "https://medium.com/renprotocol/moving-on-from-alameda-da62a823ce93",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "Ren: Moving on from Alameda, 18 Nov 2022 (disable minting, shut down Ren 1.0 after 30 days)"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "direct-source",
+      "lifecycle": "discontinued",
+      "review_note": "Discontinued by the publisher; any remaining renZEC is unbacked or at risk. It never preserved shielded privacy."
+    },
+    {
+      "id": "btcpay-zcash-plugin",
+      "name": "BTCPay Server Zcash plugin",
+      "category": "payments",
+      "website": "https://github.com/btcpay-zcash/btcpayserver-zcash-plugin",
+      "networks": [
+        "Zcash"
+      ],
+      "kind": "developer-tool",
+      "description": "Community plugin that adds ZEC invoice payments to self-hosted BTCPay Server instances.",
+      "zcash_mechanism": "Merchant runs Zebra plus lightwalletd and a wallet RPC; ZecHub lists it as shielded-only (Sapling, Orchard, Unified Address). The repo README itself does not state address types.",
+      "review_focus": "Since zcashd halted at block 3,417,100 (2026-07-18) and NU6.3 made Orchard spend-only at block 3,428,143 (2026-07-28), does it detect payments to Ironwood receivers and run without zcashd? Which address types are actually issued on invoices? The README warns one Zcash wallet is shared across all stores on an instance; who has access to that wallet? Who maintains the btcpay-zcash org?",
+      "sources": [
+        {
+          "url": "https://plugin-builder.btcpayserver.org/public/plugins/zcash-plugin",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "BTCPay Plugin Builder: ZCash Support v1.1.0 (pre-release, 2026-10-07)"
+        },
+        {
+          "url": "https://github.com/btcpay-zcash/btcpayserver-zcash-plugin",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "btcpay-zcash/btcpayserver-zcash-plugin README"
+        },
+        {
+          "url": "https://zechub.wiki/payment-processors",
+          "type": "secondary",
+          "checked": "2026-10-15",
+          "title": "ZecHub payment processors list"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "direct-source",
+      "lifecycle": "unverified",
+      "review_note": "Latest Plugin Builder build (1.1.0, 2026-10-07) is marked pre-release and requires BTCPay Server 2.3.7+; GitHub shows no tagged releases."
+    },
+    {
+      "id": "cipherpay",
+      "name": "CipherPay",
+      "category": "payments",
+      "website": "https://www.cipherpay.app",
+      "networks": [
+        "Zcash"
+      ],
+      "kind": "service",
+      "description": "Non-custodial ZEC payment service with hosted checkout, payment links, POS app, API, and Shopify/WooCommerce integrations.",
+      "zcash_mechanism": "Merchant supplies a Unified Full Viewing Key (uview...) so the service can detect incoming shielded payments; funds go directly to the merchant's wallet. Docs say all payments are shielded.",
+      "review_focus": "Since zcashd halted at block 3,417,100 (2026-07-18) and NU6.3 made Orchard spend-only at block 3,428,143 (2026-07-28), does it detect payments to Ironwood receivers and run without zcashd? What data does the operator retain from the viewing key (amounts, memos, timing)? What are the fees (docs section is empty)? Is the server code open source and self-hostable as the WooCommerce listing claims?",
+      "sources": [
+        {
+          "url": "https://www.cipherpay.app",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "CipherPay homepage (footer: (c) 2026 Atmosphere Labs)"
+        },
+        {
+          "url": "https://www.cipherpay.app/docs",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "CipherPay docs"
+        },
+        {
+          "url": "https://zechub.wiki/payment-processors",
+          "type": "secondary",
+          "checked": "2026-10-15",
+          "title": "ZecHub payment processors list"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "direct-source",
+      "lifecycle": "unverified",
+      "review_note": "Operator appears to be Atmosphere Labs per site footer and GitHub link; fees, license and launch status not stated on fetched pages."
+    },
+    {
+      "id": "nowpayments-zec",
+      "name": "NOWPayments (ZEC)",
+      "category": "payments",
+      "website": "https://nowpayments.io/supported-coins/zcash-payments",
+      "networks": [
+        "Zcash"
+      ],
+      "kind": "service",
+      "description": "Multi-coin crypto payment gateway that lists ZEC among accepted coins.",
+      "zcash_mechanism": "Merchant registers a ZEC payout wallet; the NOWPayments page does not state address type, and ZecHub lists it as transparent-only.",
+      "review_focus": "Does it accept or pay out to shielded/Unified addresses at all? Is the 'non-custodial' claim accurate given funds pass through the processor before payout? KYC and conversion handling? Since zcashd halted at block 3,417,100 (2026-07-18) and NU6.3 made Orchard spend-only at block 3,428,143 (2026-07-28), does it detect payments to Ironwood receivers and run without zcashd?",
+      "sources": [
+        {
+          "url": "https://nowpayments.io/supported-coins/zcash-payments",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "NOWPayments: Accept Zcash payments"
+        },
+        {
+          "url": "https://zechub.wiki/payment-processors",
+          "type": "secondary",
+          "checked": "2026-10-15",
+          "title": "ZecHub payment processors list"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "direct-source",
+      "lifecycle": "unverified",
+      "review_note": "Publisher page markets Zcash privacy generically but does not document shielded support; treat as transparent until shown otherwise."
+    },
+    {
+      "id": "plisio-zec",
+      "name": "Plisio (ZEC)",
+      "category": "payments",
+      "website": "https://plisio.net/accept-zcash",
+      "networks": [
+        "Zcash"
+      ],
+      "kind": "service",
+      "description": "Crypto payment gateway that lists Zcash among accepted currencies.",
+      "zcash_mechanism": "Merchant receives ZEC via the gateway and withdraws to own wallet; address type not documented by Plisio, ZecHub lists it as transparent.",
+      "review_focus": "Custody model during settlement window? Shielded support? Fee schedule beyond the stated 0.5%? Since zcashd halted at block 3,417,100 (2026-07-18) and NU6.3 made Orchard spend-only at block 3,428,143 (2026-07-28), does it detect payments to Ironwood receivers and run without zcashd?",
+      "sources": [
+        {
+          "url": "https://plisio.net/accept-zcash",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "Plisio: Accept Zcash"
+        },
+        {
+          "url": "https://zechub.wiki/payment-processors",
+          "type": "secondary",
+          "checked": "2026-10-15",
+          "title": "ZecHub payment processors list"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "direct-source",
+      "lifecycle": "unverified",
+      "review_note": "Publisher page does not state custody or address type."
+    },
+    {
+      "id": "zgo",
+      "name": "ZGo",
+      "category": "payments",
+      "website": "https://zgo.cash/",
+      "networks": [
+        "Zcash"
+      ],
+      "kind": "application",
+      "description": "Zcash point-of-sale payments app.",
+      "zcash_mechanism": "ZecHub lists Sapling and Orchard shielded support; the fetched publisher page returned only its title.",
+      "review_focus": "Is it still maintained? Since zcashd halted at block 3,417,100 (2026-07-18) and NU6.3 made Orchard spend-only at block 3,428,143 (2026-07-28), does it detect payments to Ironwood receivers and run without zcashd? Who operates it and is it custodial?",
+      "sources": [
+        {
+          "url": "https://zgo.cash/",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "ZGo - The Zcash Payments App (title only rendered)"
+        },
+        {
+          "url": "https://zechub.wiki/payment-processors",
+          "type": "secondary",
+          "checked": "2026-10-15",
+          "title": "ZecHub payment processors list"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "ecosystem-only",
+      "lifecycle": "unverified",
+      "review_note": "Publisher site rendered no substantive content on fetch; details come from ZecHub only."
+    },
+    {
+      "id": "flexa-zec",
+      "name": "Flexa (ZEC via Zashi/Zodl)",
+      "category": "payments",
+      "website": "https://flexa.co/",
+      "networks": [
+        "Zcash"
+      ],
+      "kind": "network",
+      "description": "Retail payment network integrated into the Zashi wallet in November 2024 so users can pay ZEC at Flexa-enabled US stores.",
+      "zcash_mechanism": "User spends from a shielded balance in the wallet; Flexa settles merchants in their chosen currency. Merchant-side ZEC handling is not documented.",
+      "review_focus": "Is the integration still live in the renamed Zodl wallet after NU6.3? Which regions and merchants currently accept? What KYC/data does Flexa collect from spenders?",
+      "sources": [
+        {
+          "url": "https://flexa.co/newsroom/zashi",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "Flexa newsroom: Flexa and Electric Coin Co. integration with Zashi (2024-11-26)"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "direct-source",
+      "lifecycle": "unverified",
+      "review_note": "Only a 2024 launch announcement was verified; current merchant coverage unconfirmed."
+    },
+    {
+      "id": "zip-321",
+      "name": "ZIP 321: Payment Request URIs",
+      "category": "payments",
+      "website": "https://zips.z.cash/zip-0321",
+      "networks": [
+        "Zcash"
+      ],
+      "kind": "standard",
+      "description": "Zcash standard for zcash: payment-request URIs and QR codes, including multi-recipient requests.",
+      "zcash_mechanism": "Supports Sapling, Unified and transparent recipients; memos only for shielded recipients; Sprout excluded.",
+      "review_focus": "Do target wallets and processors implement multi-payment (paramindex) requests and Unified Addresses with Ironwood receivers?",
+      "sources": [
+        {
+          "url": "https://zips.z.cash/zip-0321",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "ZIP 321 (Status: Active)"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "direct-source",
+      "lifecycle": "not-applicable",
+      "review_note": "Standard, not a product; status Active."
+    },
+    {
+      "id": "paywithzcash-directory",
+      "name": "Pay With Zcash directory",
+      "category": "payments",
+      "website": "https://paywithz.cash",
+      "networks": [
+        "Zcash"
+      ],
+      "kind": "data",
+      "description": "Community directory of businesses and organizations that say they accept ZEC, plus an ATM finder.",
+      "zcash_mechanism": "Listings only; does not process payments or state whether each merchant takes shielded ZEC.",
+      "review_focus": "Who runs it and how are listings verified or expired? Do listed merchants still accept ZEC, and shielded or transparent?",
+      "sources": [
+        {
+          "url": "https://paywithz.cash",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "Discover Where to Pay With Zcash"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "direct-source",
+      "lifecycle": "unverified",
+      "review_note": "Operator, verification process and last-update date are not stated on the page."
+    },
+    {
+      "id": "zechub-payment-processors",
+      "name": "ZecHub payment processor list",
+      "category": "payments",
+      "website": "https://zechub.wiki/payment-processors",
+      "networks": [
+        "Zcash"
+      ],
+      "kind": "data",
+      "description": "Community wiki page comparing ZEC payment processors by shielded support.",
+      "zcash_mechanism": "Reference only; classifies processors as shielded, transparent or undocumented.",
+      "review_focus": "When was each row last checked, particularly after NU6.3? Are claims sourced to processor docs?",
+      "sources": [
+        {
+          "url": "https://zechub.wiki/payment-processors",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "ZecHub: Payment processors"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "ecosystem-only",
+      "lifecycle": "not-applicable",
+      "review_note": "Useful cross-check but community-maintained; rows lack per-entry dates."
+    },
+    {
+      "id": "the-zcash-etf-zcsh",
+      "name": "The Zcash ETF (ZCSH), formerly Grayscale Zcash Trust",
+      "category": "centralized",
+      "website": "https://www.grayscale.com/",
+      "networks": [
+        "Zcash"
+      ],
+      "kind": "asset",
+      "description": "Grayscale-sponsored exchange-traded product holding ZEC, listed on NYSE Arca after conversion from the OTCQX-quoted Grayscale Zcash Trust.",
+      "zcash_mechanism": "Trust holds ZEC in cold storage with Coinbase Custody Trust Company (Coinbase, Inc. prime broker); prospectus does not say whether holdings are in shielded or transparent addresses. Creations cash or in-kind; redemptions cash-only as of prospectus date.",
+      "review_focus": "Shielded or transparent custody addresses? How did the custodian handle the Orchard soft fork and NU6.3? When will in-kind redemptions be allowed? Concentration of the custodian/prime broker role.",
+      "sources": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/0001720265/000119312526364568/zcsh__424b3_08.25.2026.htm",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "The Zcash ETF Form 424B3 prospectus (2026-08-24)"
+        },
+        {
+          "url": "https://www.taiwannews.com.tw/en/news/6427603",
+          "type": "secondary",
+          "checked": "2026-10-15",
+          "title": "GlobeNewswire release reprint: ZCSH begins trading on NYSE Arca (2026-08-25)"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "direct-source",
+      "lifecycle": "changed",
+      "review_note": "Converted from a trust to an exchange-listed ETP in August 2026; sponsor fee not confirmed from the fetched prospectus portion and omitted here."
+    },
+    {
+      "id": "winklevoss-zcash-etf",
+      "name": "Winklevoss Zcash ETF (proposed, WINK)",
+      "category": "centralized",
+      "website": "https://www.sec.gov/Archives/edgar/data/0002158471/000110465926113940/tm2626975-1_s1.htm",
+      "networks": [
+        "Zcash"
+      ],
+      "kind": "asset",
+      "description": "Proposed spot ZEC exchange-traded product sponsored by Winklevoss Asset Services, filed on Form S-1 for a Nasdaq listing.",
+      "zcash_mechanism": "Would hold ZEC directly in segregated cold-storage addresses with Gemini Trust Company (sponsor affiliate) as custodian; S-1 does not say shielded or transparent.",
+      "review_focus": "Registration not effective; will it be? Affiliate custodian conflicts. Address type of custody holdings. Pricing benchmark (reported blank).",
+      "sources": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/0002158471/000110465926113940/tm2626975-1_s1.htm",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "Winklevoss Zcash ETF Form S-1, preliminary (2026-10-06)"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "direct-source",
+      "lifecycle": "unverified",
+      "review_note": "Preliminary prospectus, subject to completion; not a listed product. 0.25% unified fee per S-1."
+    },
+    {
+      "id": "cypherpunk-technologies",
+      "name": "Cypherpunk Technologies (CYPH)",
+      "category": "centralized",
+      "website": "https://cypherpunk.com",
+      "networks": [
+        "Zcash"
+      ],
+      "kind": "organization",
+      "description": "Nasdaq-listed company, formerly Leap Therapeutics, that holds a ZEC treasury and operates Zcash mining.",
+      "zcash_mechanism": "Corporate balance-sheet ZEC holdings plus mining; company states a goal of accumulating 5% of the Zcash network.",
+      "review_focus": "Custody arrangement and address type for treasury ZEC? Accounting treatment (filings refer to a ZEC receivable)? Dilution and financing terms? Related-party links (Winklevoss Capital, ZODL investment).",
+      "sources": [
+        {
+          "url": "https://data.sec.gov/submissions/CIK0001509745.json",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "SEC EDGAR submissions: former name Leap Therapeutics until 2025-11-12"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1509745/000110465925125039/tm2534480d2_ex99-1.htm",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "Cypherpunk 8-K Ex.99.1 (2025-12-30)"
+        },
+        {
+          "url": "https://cypherpunk.com",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "Cypherpunk Technologies website"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "direct-source",
+      "lifecycle": "unverified",
+      "review_note": "Holdings figures change frequently; check latest 10-Q/8-K rather than this entry."
+    },
+    {
+      "id": "coinbase-custody-zec",
+      "name": "Coinbase Custody Trust Company (ZEC)",
+      "category": "centralized",
+      "website": "https://www.coinbase.com/",
+      "networks": [
+        "Zcash"
+      ],
+      "kind": "service",
+      "description": "Qualified custodian named as ZEC custodian for The Zcash ETF, with Coinbase, Inc. as prime broker.",
+      "zcash_mechanism": "Holds ETF ZEC in offline cold storage per the prospectus; address type not disclosed.",
+      "review_focus": "Shielded vs transparent custody? Upgrade handling (NU6.3 migration out of Orchard if any holdings were there)? Availability of custody to non-ETF institutions.",
+      "sources": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/0001720265/000119312526364568/zcsh__424b3_08.25.2026.htm",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "The Zcash ETF Form 424B3 (2026-08-24)"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "direct-source",
+      "lifecycle": "unverified",
+      "review_note": "Evidence is the ETF prospectus, not a Coinbase product page."
+    },
+    {
+      "id": "coinbase-exchange-zec",
+      "name": "Coinbase exchange (ZEC)",
+      "category": "centralized",
+      "website": "https://www.coinbase.com/",
+      "networks": [
+        "Zcash"
+      ],
+      "kind": "exchange",
+      "description": "US exchange that listed ZEC in 2018 with shielded deposits but transparent-only withdrawals.",
+      "zcash_mechanism": "2018 policy: deposits from transparent and shielded addresses accepted, withdrawals to transparent only; no later change found.",
+      "review_focus": "Is the withdrawal policy still transparent-only? Regional availability (Coinbase UK removed ZEC in 2019)? Ironwood/Unified Address deposit support?",
+      "sources": [
+        {
+          "url": "https://zodl.com/coinbase-announces-support-for-zcash/",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "ECC (archived on zodl.com): Coinbase announces support for Zcash (2018-11-29)"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "direct-source",
+      "lifecycle": "unverified",
+      "review_note": "Coinbase's own blog and price page returned 403; a third-party claim of a 2026 delisting is unverified and contradicted by Coinbase's ETF custody role."
+    },
+    {
+      "id": "gemini-zec",
+      "name": "Gemini (ZEC exchange and custody)",
+      "category": "centralized",
+      "website": "https://www.gemini.com/",
+      "networks": [
+        "Zcash"
+      ],
+      "kind": "exchange",
+      "description": "US exchange that added shielded ZEC withdrawals in 2020 and is named custodian for the proposed Winklevoss Zcash ETF.",
+      "zcash_mechanism": "2020: holds customer ZEC in transparent addresses, accepts shielded deposits and allows withdrawals to z-addresses.",
+      "review_focus": "Does shielded withdrawal still work, and to which pools (Sapling, Unified/Ironwood)? Post-NU6.3 deposit handling? Affiliate conflicts with the WINK ETF.",
+      "sources": [
+        {
+          "url": "https://www.gemini.com/blog/youre-one-step-closer-to-financial-freedom-with-shielded-zec-withdrawals",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "Gemini blog: shielded ZEC withdrawals (2020-09-29)"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/0002158471/000110465926113940/tm2626975-1_s1.htm",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "Winklevoss Zcash ETF S-1 (2026-10-06)"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "direct-source",
+      "lifecycle": "unverified",
+      "review_note": "Shielded-withdrawal evidence is from 2020; current support not re-confirmed."
+    },
+    {
+      "id": "gemini-credit-card-zcash-edition",
+      "name": "Gemini Credit Card: Zcash Edition",
+      "category": "centralized",
+      "website": "https://gemini.com/zcash",
+      "networks": [
+        "Zcash"
+      ],
+      "kind": "service",
+      "description": "Limited-edition Gemini credit card, issued by WebBank, that pays card rewards in ZEC by default.",
+      "zcash_mechanism": "Rewards credited as ZEC to the user's Gemini custodial account; spending is in fiat, not ZEC.",
+      "review_focus": "Not a ZEC spending card. Where are rewards held and can they be withdrawn shielded? Eligibility and jurisdiction limits?",
+      "sources": [
+        {
+          "url": "https://gemini.com/zcash",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "Gemini Credit Card: Zcash Edition page (2026)"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "direct-source",
+      "lifecycle": "unverified",
+      "review_note": "Reward rates intentionally omitted; terms may change."
+    },
+    {
+      "id": "cobo-zec-custody",
+      "name": "Cobo (ZEC custody)",
+      "category": "centralized",
+      "website": "https://www.cobo.com/",
+      "networks": [
+        "Zcash"
+      ],
+      "kind": "service",
+      "description": "Institutional custody and wallet-infrastructure provider that announced support for the NU6.3 Ironwood upgrade.",
+      "zcash_mechanism": "Custodial ZEC deposits/withdrawals; paused services during NU6.3 and required consensus branch ID 0x37A5165B.",
+      "review_focus": "Which address types does it support post-NU6.3? Shielded withdrawal support? Jurisdictions and licensing?",
+      "sources": [
+        {
+          "url": "https://www.cobo.com/post/ZEC_Ironwood_Network_Upgrade-2026-07-27-1536",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "Cobo: support for Zcash Ironwood (NU6.3) upgrade (2026-07-27)"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "direct-source",
+      "lifecycle": "unverified",
+      "review_note": "Evidence covers upgrade handling only, not shielded support."
+    },
+    {
+      "id": "zip-320-tex-addresses",
+      "name": "ZIP 320: TEX (transparent-source-only) addresses",
+      "category": "centralized",
+      "website": "https://zips.z.cash/zip-0320",
+      "networks": [
+        "Zcash"
+      ],
+      "kind": "standard",
+      "description": "Address encoding that tells wallets to send only from transparent funds, created after Binance required identifiable deposit sources.",
+      "zcash_mechanism": "Bech32m re-encoding (tex prefix) of a transparent P2PKH address; wallet-side rule, not consensus.",
+      "review_focus": "Which exchanges require TEX deposits today? Does the user's wallet deshield automatically (privacy leak) when paying a TEX address?",
+      "sources": [
+        {
+          "url": "https://zips.z.cash/zip-0320",
+          "type": "primary",
+          "checked": "2026-10-15",
+          "title": "ZIP 320 (Status: Active)"
+        }
+      ],
+      "last_reviewed": "2026-10-15",
+      "evidence": "direct-source",
+      "lifecycle": "not-applicable",
+      "review_note": "Exchange-compliance standard; not enforced by consensus."
+    }
+  ]
+}
