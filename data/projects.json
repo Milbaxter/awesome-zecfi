@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "title": "Awesome ZecFi",
-  "as_of": "2026-10-15",
+  "as_of": "2026-10-18",
   "scope": "A broad, curated and source-reviewed directory of Zcash finance; not an exhaustive census or investment recommendation.",
   "categories": [
     {
@@ -2716,6 +2716,43 @@
       "evidence": "direct-source",
       "lifecycle": "not-applicable",
       "review_note": "Exchange-compliance standard; not enforced by consensus."
+    },
+    {
+      "id": "zec-view",
+      "name": "ZEC View",
+      "category": "research",
+      "website": "https://zecview.com/",
+      "networks": [
+        "Zcash"
+      ],
+      "kind": "data",
+      "description": "Independent, source-linked Zcash market, shielded-pool and ZCSH research pages with dated observations and browser-based calculators.",
+      "zcash_mechanism": "Read-only documentation and provider observations of native ZEC and source-defined shielded-pool balances; distinguishes transparent and shielded receiver types. It is not a wallet, bridge or independent consensus node.",
+      "review_focus": "Check source observation dates, pool definitions and wallet-documentation dates; distinguish fund valuation dates from live quotes and aggregate balances from individual privacy.",
+      "evidence": "direct-source",
+      "lifecycle": "unverified",
+      "review_note": "Reviewed the publisher's public pages and stated methodology, not the underlying data pipeline or wallet compatibility through transaction testing. Provider data may be delayed or incomplete. The site describes no custody, trading or wallet connection. Proposed by a maintainer; inclusion is not an endorsement.",
+      "sources": [
+        {
+          "url": "https://zecview.com/",
+          "type": "primary",
+          "checked": "2026-10-18",
+          "title": "ZEC View public dashboard and research navigation"
+        },
+        {
+          "url": "https://zecview.com/methodology/",
+          "type": "primary",
+          "checked": "2026-10-18",
+          "title": "Publisher methodology: source dates, network aggregation and no independent node"
+        },
+        {
+          "url": "https://zecview.com/privacy/address-types/",
+          "type": "primary",
+          "checked": "2026-10-18",
+          "title": "Publisher address-type explanation with ZIP 316 references"
+        }
+      ],
+      "last_reviewed": "2026-10-18"
     }
   ]
 }

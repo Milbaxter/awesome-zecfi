@@ -1,6 +1,6 @@
 # Detailed ZecFi directory
 
-Snapshot: **2026-10-15**. [Method and status definitions](methodology.md) · [Awesome list](../README.md)
+Snapshot: **2026-10-18**. [Method and status definitions](methodology.md) · [Awesome list](../README.md)
 
 Descriptions summarize publisher documentation. Review focuses are editorial questions, not completed security assessments. Network tags describe relevance, not a certified list of live deployments.
 
@@ -1071,6 +1071,23 @@ A company formed in early 2026 by the former Electric Coin Company team, which c
 - **Source 2:** [The Block: Zcash developers quit, form new company (2026-01-08)](https://www.theblock.co/post/384737/zcash-developers-form-new-company) — secondary; reviewed 2026-10-15.
 - **Source 3:** [zcashd EOL page: Zallet from ZODL](https://zcash.github.io/zcash/user/end-of-life.html) — primary; reviewed 2026-10-15.
 - **Source 4:** [zodl-inc GitHub org](https://github.com/zodl-inc) — primary; reviewed 2026-10-15.
+
+<a id="zec-view"></a>
+### ZEC View
+
+**Type:** data · **Networks:** Zcash · **Reviewed:** 2026-10-18
+
+**Evidence:** `direct-source` · **Lifecycle:** `unverified`
+
+Independent, source-linked Zcash market, shielded-pool and ZCSH research pages with dated observations and browser-based calculators.
+
+- **Zcash mechanism:** Read-only documentation and provider observations of native ZEC and source-defined shielded-pool balances; distinguishes transparent and shielded receiver types. It is not a wallet, bridge or independent consensus node.
+- **Review focus:** Check source observation dates, pool definitions and wallet-documentation dates; distinguish fund valuation dates from live quotes and aggregate balances from individual privacy.
+- **Evidence and availability qualification:** Reviewed the publisher's public pages and stated methodology, not the underlying data pipeline or wallet compatibility through transaction testing. Provider data may be delayed or incomplete. The site describes no custody, trading or wallet connection. Proposed by a maintainer; inclusion is not an endorsement.
+- **Project/resource:** [ZEC View](https://zecview.com/)
+- **Source 1:** [ZEC View public dashboard and research navigation](https://zecview.com/) — primary; reviewed 2026-10-18.
+- **Source 2:** [Publisher methodology: source dates, network aggregation and no independent node](https://zecview.com/methodology/) — primary; reviewed 2026-10-18.
+- **Source 3:** [Publisher address-type explanation with ZIP 316 references](https://zecview.com/privacy/address-types/) — primary; reviewed 2026-10-18.
 
 <a id="zecblock-explorer"></a>
 ### ZecBlock (formerly CipherScan)

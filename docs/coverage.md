@@ -1,16 +1,16 @@
 # Evidence coverage and review queue
 
-Snapshot: **2026-10-15** · [Method](methodology.md) · [Browse](browse.md) · [Material changes](research-notes.md)
+Snapshot: **2026-10-18** · [Method](methodology.md) · [Browse](browse.md) · [Material changes](research-notes.md)
 
 Generated from the dataset. Counts describe research coverage, not project quality or safety. Several sources from one publisher are not independent corroboration.
 
 | Measure | Count |
 | --- | ---: |
-| Total entries | 81 |
+| Total entries | 82 |
 | Entries with one cited source | 23 |
 | Entries citing only their listed website/resource URL | 13 |
 | Evidence: code-only | 11 |
-| Evidence: direct-source | 66 |
+| Evidence: direct-source | 67 |
 | Evidence: ecosystem-only | 4 |
 
 A website/resource URL can be a technical document or repository, so the URL-only count is a triage signal, not a claim that all those sources are marketing pages.
