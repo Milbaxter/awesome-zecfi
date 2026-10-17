@@ -146,7 +146,7 @@ Expand a group to browse its entries.
 </details>
 
 <details>
-<summary>Zcash (75)</summary>
+<summary>Zcash (76)</summary>
 
 - [Bitfrost Native ZEC (BZEC) on Hyperliquid](directory.md#bitfrost-bzec) — Hyperliquid spot token named 'Bitfrost Native ZEC' (BZEC), with a HyperEVM contract, that third-party guides describe as ZEC bridged by Bitfrost's HYPE-staked validator set.
 - [Brave Wallet](directory.md#brave-wallet) — The browser-integrated wallet in Brave, which added shielded Zcash transactions on desktop in v1.77 (April 2025).
@@ -209,6 +209,7 @@ Expand a group to browse its entries.
 - [zcashd](directory.md#zcashd) — The original C++ Zcash full node and embedded wallet, which reached end of life with a hard halt at block 3,417,100 on 18 July 2026.
 - [Zebra](directory.md#zebra) — The Zcash Foundation's Rust consensus node, now the reference full validator after zcashd's end of life.
 - [ZEC on NEAR Intents (zec.omft.near, POA Bridge)](directory.md#zec-on-near-poa) — Bridged ZEC token (nep141:zec.omft.near) issued by the NEAR Intents Proof-of-Authority bridge, also listed by the 1Click API as ZEC on Starknet and Aptos.
+- [ZEC View](directory.md#zec-view) — Independent, source-linked Zcash market, shielded-pool and ZCSH research pages with dated observations and browser-based calculators.
 - [ZecBlock (formerly CipherScan)](directory.md#zecblock-explorer) — A Zcash block explorer and privacy-analytics site with mainnet, testnet and Crosslink feature-net views.
 - [ZecHub](directory.md#zechub) — A community-run Zcash education wiki and hub with guides, newsletters and ecosystem directories.
 - [ZecHub payment processor list](directory.md#zechub-payment-processors) — Community wiki page comparing ZEC payment processors by shielded support.
@@ -249,7 +250,7 @@ Expand a group to browse its entries.
 </details>
 
 <details>
-<summary>direct-source (66)</summary>
+<summary>direct-source (67)</summary>
 
 - [Aster ZECUSDT perpetual](directory.md#aster-zec-perp) — ZECUSDT perpetual futures market on the Aster perp DEX.
 - [Brave Wallet](directory.md#brave-wallet) — The browser-integrated wallet in Brave, which added shielded Zcash transactions on desktop in v1.77 (April 2025).
@@ -308,6 +309,7 @@ Expand a group to browse its entries.
 - [Zcash Shielded Assets (ZSA / OrchardZSA)](directory.md#zcash-shielded-assets) — A proposed extension of the Orchard protocol, led by QEDIT, that would let assets other than ZEC be issued, transferred and burned inside a shielded pool.
 - [zcashd](directory.md#zcashd) — The original C++ Zcash full node and embedded wallet, which reached end of life with a hard halt at block 3,417,100 on 18 July 2026.
 - [ZEC on NEAR Intents (zec.omft.near, POA Bridge)](directory.md#zec-on-near-poa) — Bridged ZEC token (nep141:zec.omft.near) issued by the NEAR Intents Proof-of-Authority bridge, also listed by the 1Click API as ZEC on Starknet and Aptos.
+- [ZEC View](directory.md#zec-view) — Independent, source-linked Zcash market, shielded-pool and ZCSH research pages with dated observations and browser-based calculators.
 - [ZecBlock (formerly CipherScan)](directory.md#zecblock-explorer) — A Zcash block explorer and privacy-analytics site with mainnet, testnet and Crosslink feature-net views.
 - [ZecHub](directory.md#zechub) — A community-run Zcash education wiki and hub with guides, newsletters and ecosystem directories.
 - [zenZEC (Zenrock)](directory.md#zenzec) — Zenrock's Decentralized Custody Token for Zcash, minted on Solana (mint JDt9rRGaieF6aN1cJkXFeUmsy7ZE4yY3CZb8tVMXVroS) against ZEC locked in Zenrock's decentralized MPC custody network.
@@ -423,7 +425,7 @@ Expand a group to browse its entries.
 </details>
 
 <details>
-<summary>unverified (36)</summary>
+<summary>unverified (37)</summary>
 
 - [Aster ZECUSDT perpetual](directory.md#aster-zec-perp) — ZECUSDT perpetual futures market on the Aster perp DEX.
 - [Bitfrost Native ZEC (BZEC) on Hyperliquid](directory.md#bitfrost-bzec) — Hyperliquid spot token named 'Bitfrost Native ZEC' (BZEC), with a HyperEVM contract, that third-party guides describe as ZEC bridged by Bitfrost's HYPE-staked validator set.
@@ -457,6 +459,7 @@ Expand a group to browse its entries.
 - [Winklevoss Zcash ETF (proposed, WINK)](directory.md#winklevoss-zcash-etf) — Proposed spot ZEC exchange-traded product sponsored by Winklevoss Asset Services, filed on Form S-1 for a Nasdaq listing.
 - [Wrapped ZEC (WZEC, Ethereum)](directory.md#wzec-ethereum) — Custodial ERC-20 representation of ZEC launched in October 2020 by Tokensoft's 'Wrapped' with Anchorage custody; the contract 0x4A64…6E10 still reports name 'Wrapped ZEC'.
 - [Zcash Block Explorer (zcashexplorer.app)](directory.md#zcash-block-explorer-nighthawk) — An open-source Zcash block explorer credited to Nighthawk Apps, with transaction-type tags and viewing-key tools.
+- [ZEC View](directory.md#zec-view) — Independent, source-linked Zcash market, shielded-pool and ZCSH research pages with dated observations and browser-based calculators.
 - [zenZEC (Zenrock)](directory.md#zenzec) — Zenrock's Decentralized Custody Token for Zcash, minted on Solana (mint JDt9rRGaieF6aN1cJkXFeUmsy7ZE4yY3CZb8tVMXVroS) against ZEC locked in Zenrock's decentralized MPC custody network.
 - [ZGo](directory.md#zgo) — Zcash point-of-sale payments app.
 - [Zingo](directory.md#zingo-wallet) — An iOS and Android shielded Zcash wallet from Zingo Labs, built on zingolib with its pepper-sync engine.
@@ -498,11 +501,12 @@ Expand a group to browse its entries.
 </details>
 
 <details>
-<summary>data (5)</summary>
+<summary>data (6)</summary>
 
 - [Ironwood Migration tracker (Zodl)](directory.md#ironwood-migration-tracker) — A ZODL dashboard that tracks how much ZEC has moved from the Orchard pool into Ironwood.
 - [Pay With Zcash directory](directory.md#paywithzcash-directory) — Community directory of businesses and organizations that say they accept ZEC, plus an ATM finder.
 - [Zcash Block Explorer (zcashexplorer.app)](directory.md#zcash-block-explorer-nighthawk) — An open-source Zcash block explorer credited to Nighthawk Apps, with transaction-type tags and viewing-key tools.
+- [ZEC View](directory.md#zec-view) — Independent, source-linked Zcash market, shielded-pool and ZCSH research pages with dated observations and browser-based calculators.
 - [ZecBlock (formerly CipherScan)](directory.md#zecblock-explorer) — A Zcash block explorer and privacy-analytics site with mainnet, testnet and Crosslink feature-net views.
 - [ZecHub payment processor list](directory.md#zechub-payment-processors) — Community wiki page comparing ZEC payment processors by shielded support.
 

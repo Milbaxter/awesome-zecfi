@@ -7,7 +7,7 @@
 
 Explore **shielded pools and network upgrades, wallets, ZEC on other chains, cross-chain swaps, trading, lending, payments and institutional access**, plus the nodes and SDKs that make them possible.
 
-**Research snapshot: October 15, 2026.** This is a broad, curated directory, not an exhaustive census, ranking, audit or investment recommendation. “Awesome” names the list format; inclusion is not an endorsement. Open source refers to **this repository**; listed projects have their own licensing and custody models.
+**Research snapshot: October 18, 2026.** Individual entries retain their own review dates; this update reviews the new ZEC View entry, not every existing source. This is a broad, curated directory, not an exhaustive census, ranking, audit or investment recommendation. “Awesome” names the list format; inclusion is not an endorsement. Open source refers to **this repository**; listed projects have their own licensing and custody models.
 
 ## Start here
 
@@ -32,7 +32,7 @@ These short descriptions deliberately omit APY, TVL and price figures, which go 
 
 <!-- DIRECTORY:START -->
 
-**81 entries · 11 categories · reviewed 2026-10-15**
+**82 entries · 11 categories · reviewed 2026-10-18**
 
 ## Contents
 
@@ -44,7 +44,7 @@ These short descriptions deliberately omit APY, TVL and price figures, which go 
 - [Payments and merchant tools](#payments) (9)
 - [Wallets and access](#wallets) (10)
 - [Nodes, SDKs and developer tools](#builders) (9)
-- [Organizations, research and data](#research) (9)
+- [Organizations, research and data](#research) (10)
 - [Centralized and institutional access](#centralized) (9)
 - [Discontinued, deprecated and changed projects](#historical) (6)
 
@@ -147,6 +147,7 @@ These short descriptions deliberately omit APY, TVL and price figures, which go 
 - [Zcash Community Grants (ZCG)](https://zcashcommunitygrants.org/) — A community-elected five-person committee that awards grants from the 8% ZCG dev-fund slice to independent Zcash teams. · [Details & sources](docs/directory.md#zcash-community-grants).
 - [Zcash Foundation](https://zfnd.org/) — A US 501(c)(3) public charity that builds Zebra and ZF FROST and runs Zcon and Zcash dev summits. · [Details & sources](docs/directory.md#zcash-foundation).
 - [Zcash Open Development Lab (ZODL)](https://zodl.com/about/) — A company formed in early 2026 by the former Electric Coin Company team, which continues Zcash core protocol work and the Zodl wallet. `changed` · [Details & sources](docs/directory.md#zodl).
+- [ZEC View](https://zecview.com/) — Independent, source-linked Zcash market, shielded-pool and ZCSH research pages with dated observations and browser-based calculators. · [Details & sources](docs/directory.md#zec-view).
 - [ZecBlock (formerly CipherScan)](https://zecblock.com/) — A Zcash block explorer and privacy-analytics site with mainnet, testnet and Crosslink feature-net views. `changed` · [Details & sources](docs/directory.md#zecblock-explorer).
 - [ZecHub](https://zechub.wiki/) — A community-run Zcash education wiki and hub with guides, newsletters and ecosystem directories. · [Details & sources](docs/directory.md#zechub).
 
